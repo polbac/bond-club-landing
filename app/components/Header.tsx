@@ -48,8 +48,9 @@ const MENU = [
     link: "/faqs",
   },
   {
-    name: "Contacto",
-    link: "/contacto",
+    name: "Play Bond",
+    link: process.env.NEXT_PUBLIC_PLAY_APP_URL,
+    external: true,
   },
 ];
 
@@ -103,7 +104,31 @@ export const Header = () => {
               ) : (
                 <NavigationMenu.Item>
                   <NavigationMenu.Link asChild className="NavigationMenuLink">
-                    <Link href={menu.link}>{menu.name}</Link>
+                    <Link
+                      href={menu.link}
+                      target={menu.external ? "_blank" : "_self"}
+                      className={menu.external ? "cta-button" : ""}
+                    >
+                      <span className="flex gap-1 block">
+                        {menu.external ? (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="size-6"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"
+                            />
+                          </svg>
+                        ) : null}
+                        {menu.name}
+                      </span>
+                    </Link>
                   </NavigationMenu.Link>
                 </NavigationMenu.Item>
               )}
@@ -125,14 +150,16 @@ const ListItem: FC<{
   icon: string;
   href: string;
   title: string;
+  external?: boolean;
 }> = React.forwardRef(
-  ({ className, children, icon, title, ...props }, forwardedRef) => (
+  ({ className, children, icon, title, external, ...props }, forwardedRef) => (
     <li>
       <NavigationMenu.Link asChild>
         <Link
           className={classNames("ListItemLink", className)}
           {...props}
           ref={forwardedRef as unknown as LegacyRef<HTMLAnchorElement>}
+          target={external ? "_blank" : "_self"}
         >
           <div className="flex gap-2 ">
             <div>{icon}</div>

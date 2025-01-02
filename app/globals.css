@@ -349,7 +349,6 @@ header {
   width: 90%;
   align-items: center;
   justify-content: space-between;
-  padding-right: 2rem;
   padding-left: 2rem;
   z-index: 99999999999;
   backdrop-filter: blur(16px);
@@ -514,7 +513,7 @@ header.black .brand-black {
 }
 
 section.precios {
-  background: #dedcd4;
+  background: #ded4d5;
   color: black;
   padding-top: 9rem;
 }
@@ -711,4 +710,47 @@ footer .multitud {
   100% {
     transform: scale(1);
   }
+}
+
+.cta-button {
+  font-family: "Nimbus Sans Cond L";
+  background: black;
+  color: white !important;
+  border-radius: 40px;
+  margin-right: 5px;
+
+  padding-right: 15px;
+  text-decoration: none !important;
+  border: 1px solid transparent;
+}
+.cta-button span {
+  color: white;
+}
+
+.cta-button:hover span {
+  animation: eagger 1s;
+}
+.cta-button:hover span {
+  color: black;
+  text-decoration: none !important;
+}
+.cta-button:hover {
+  background: #ffeb33;
+  border: 1px solid black;
+}
+
+.padding-top {
+  padding-top: 20vh;
+}
+
+.center-text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.equipo {
+  background: #d6d4de;
 }

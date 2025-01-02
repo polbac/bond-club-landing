@@ -4,41 +4,41 @@ import { Transition } from "../Transition";
 
 const STEPS = [
   {
-    imagen: "gato.png",
+    imagen: "step1.jpg",
     title: "Te registras como usuario creadxr",
     description: "lorem ipsum dolor",
   },
 
   {
-    imagen: "gato.png",
+    imagen: "step-upload.jpg",
     title: "Subis tu obra",
     description:
       "Llenas el formulario con la información necesaria. Aquí podras elegir las etiquetas, los géneros que consideres más presentes en tu obra. Tambien cargaras los creditos. Podes elegir el precio de PPV (alquiler)",
   },
 
   {
-    imagen: "gato.png",
+    imagen: "step-curaduria.jpg",
     title: "Curaduría",
     description:
       "El equipo de Bond Club revisará tu obra (puede tardar hasta 7 días). Recibirás una notificación con la confirmación",
   },
 
   {
-    imagen: "gato.png",
+    imagen: "step-pagas.jpg",
     title: "Pagas el derecho de publicación de obra",
     description:
       "Una vez aprobada recibirás un link para poder abonar el derecho de publicación",
   },
 
   {
-    imagen: "gato.png",
+    imagen: "step-publicar.jpg",
     title: "Publicación de tu obra",
     description:
       "Tu obra estará disponible para su reproducción (de suscriptores) o alquiler PPV",
   },
 
   {
-    imagen: "gato.png",
+    imagen: "step-monetiza.jpg",
     title: "Monetización",
     description: (
       <span>
@@ -118,7 +118,7 @@ const STEPS = [
     ),
   },
   {
-    imagen: "gato.png",
+    imagen: "step-money.jpg",
     title: "Retirá tus fondos",
     description:
       "Una vez que cuentes con tus mangos vas a poder retirarlos a un CBU ",
@@ -135,26 +135,27 @@ export const Timeline = () => (
           marginRight: "auto",
         }}
       >
-        <div className="w-1/2 relative">
-          <Image
-            src={`/assets/monetiza/${step.imagen}`}
-            loading={"lazy"}
-            width={500}
-            height={500}
-            alt="a"
-          />
-          <div
-            style={{
-              position: "absolute",
-              background: "black",
-              color: "white",
-              top: "50%",
-              left: "50%",
-            }}
-          >
-            Remplazar
-          </div>
-
+        <div className="w-1/2 relative mb-20">
+          <Transition>
+            <div
+              style={{
+                border: "1px solid black",
+                margin: "20px",
+                width: "80%",
+              }}
+              className="relative before:absolute before:top-0 before:left-0 before:w-full
+     before:h-full before:content-[''] before:opacity-[0.15] before:z-10 before:pointer-events-none
+     before:bg-[url('/assets/noise.webp')]"
+            >
+              <Image
+                src={`/assets/monetiza/${step.imagen}`}
+                loading={"lazy"}
+                width={500}
+                height={500}
+                alt="a"
+              />
+            </div>
+          </Transition>
           <span
             style={{
               width: "30px",

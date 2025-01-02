@@ -32,5 +32,9 @@ export const MenuColor = ({
     };
   }, [elementRef, setColor]);
 
+  useEffect(() => {
+    setColor(color);
+  }, []);
+
   return <div ref={elementRef}>{children}</div>;
 };
