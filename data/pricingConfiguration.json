@@ -1,0 +1,9 @@
+{
+  "mangos": {
+    "perPlay": 5,
+    "perUpload": 2,
+    "perDonation": 15,
+    "perReferrer": 10,
+    "perRent": 10
+  }
+}

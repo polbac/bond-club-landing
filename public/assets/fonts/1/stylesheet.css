@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Nimbus Sans Cond L';
+    src: url('NimbusSanConL-Reg.woff2') format('woff2'),
+        url('NimbusSanConL-Reg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nimbus Sans L';
+    src: url('NimbusSanL-Bol.woff2') format('woff2'),
+        url('NimbusSanL-Bol.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cardinal Fruit';
+    src: url('CardinalFruit-Regular.woff2') format('woff2'),
+        url('CardinalFruit-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

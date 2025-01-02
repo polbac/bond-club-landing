@@ -1,0 +1,32 @@
+{
+  "duration": {
+    "short": {
+      "from": 0,
+      "to": 25
+    },
+    "mid": {
+      "from": 26,
+      "to": 60
+    },
+    "large": {
+      "from": 60
+    }
+  },
+  "pricing": {
+    "3_months": {
+      "short": 10000,
+      "mid": 15000,
+      "large": 20000
+    },
+    "6_months": {
+      "short": 20000,
+      "mid": 25000,
+      "large": 30000
+    },
+    "12_months": {
+      "short": 30000,
+      "mid": 35000,
+      "large": 40000
+    }
+  }
+}
