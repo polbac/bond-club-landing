@@ -141,6 +141,7 @@ export const Timeline = () => (
             loading={"lazy"}
             width={500}
             height={500}
+            alt="a"
           />
           <div
             style={{
