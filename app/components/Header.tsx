@@ -105,7 +105,7 @@ export const Header = () => {
                 <NavigationMenu.Item>
                   <NavigationMenu.Link asChild className="NavigationMenuLink">
                     <Link
-                      href={menu.link}
+                      href={menu.link || ""}
                       target={menu.external ? "_blank" : "_self"}
                       className={menu.external ? "cta-button" : ""}
                     >

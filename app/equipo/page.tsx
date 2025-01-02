@@ -65,34 +65,36 @@ export default async function Equipo() {
             {TEAM.map((people) => (
               <div className="text-black text-center">
                 <Transition>
-                  <div
-                    className="relative before:absolute before:top-0 before:left-0 before:w-full
+                  <>
+                    <div
+                      className="relative before:absolute before:top-0 before:left-0 before:w-full
      before:h-full before:content-[''] before:opacity-[0.15] before:z-10 before:pointer-events-none
      before:bg-[url('/assets/noise.webp')]"
-                    style={{
-                      backgroundImage: `url(/assets/equipo/${people.image})`,
-                      width: "300px",
-                      height: "300px",
-                      backgroundPosition: "center center",
-                      backgroundSize: "cover",
-                      border: "1px solid black",
-                    }}
-                  ></div>
-                  <p
-                    className="block mt-2 font-serif"
-                    style={{ fontSize: "1.5rem" }}
-                  >
-                    {people.name}
-                  </p>
-                  <p
-                    className="font-condensed"
-                    style={{
-                      fontSize: "1.5rem",
-                      color: "#48676f",
-                    }}
-                  >
-                    {people.rol}
-                  </p>
+                      style={{
+                        backgroundImage: `url(/assets/equipo/${people.image})`,
+                        width: "300px",
+                        height: "300px",
+                        backgroundPosition: "center center",
+                        backgroundSize: "cover",
+                        border: "1px solid black",
+                      }}
+                    ></div>
+                    <p
+                      className="block mt-2 font-serif"
+                      style={{ fontSize: "1.5rem" }}
+                    >
+                      {people.name}
+                    </p>
+                    <p
+                      className="font-condensed"
+                      style={{
+                        fontSize: "1.5rem",
+                        color: "#48676f",
+                      }}
+                    >
+                      {people.rol}
+                    </p>
+                  </>
                 </Transition>
               </div>
             ))}
