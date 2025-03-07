@@ -18,8 +18,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const fullUrl = headers().get("referer") || "";
-  const isIndex = fullUrl.endsWith("/");
+  const headersList = headers();
+  const pathname = headersList.get("x-invoke-path") || "";
+  const isIndex = pathname === "/" || pathname === "";
+
+  console.log({ pathname });
 
   return (
     <html lang="en">

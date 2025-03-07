@@ -1,4 +1,3 @@
-"use client";
 import { ScrollBaseAnimation } from "./components/TextMarquee";
 import Image from "next/image";
 
