@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 
 import { HeaderContextProvider } from "./context/HeaderContext";
 /* import AnimatedCursor from "react-animated-cursor"; */
@@ -17,14 +18,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fullUrl = headers().get("referer") || "";
+  const isIndex = fullUrl.endsWith("/");
+
   return (
     <html lang="en">
       <body>
         <HeaderContextProvider>
-          <Header />
+          {!isIndex && <Header />}
 
           {children}
         </HeaderContextProvider>
+
         {/* <AnimatedCursor
           clickables={[
             "a",
@@ -40,8 +45,7 @@ export default function RootLayout({
             ".cursor",
           ]}
         /> */}
-
-        <Footer />
+        {!isIndex && <Footer />}
 
         <link rel="stylesheet" href="/assets/fonts/VCROSDMono.css" />
         <link rel="stylesheet" href="/assets/fonts/chaney/stylesheet.css" />
