@@ -59,6 +59,11 @@ export default function Home() {
             quis faucibus mauris euismod. Vivamus fringilla sagittis neque a
             pretium. In luctus nisi nec accumsan placerat.
           </p>
+          <p
+            style={{ textAlign: "right", display: "block", marginTop: "2rem" }}
+          >
+            Atte. El Consejo B.O.N.D
+          </p>
         </div>
       </div>
 
