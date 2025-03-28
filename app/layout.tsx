@@ -46,7 +46,7 @@ export default function RootLayout({
             ".cursor",
           ]}
         /> */}
-        {!isIndex && <Footer />}
+        <Footer />
 
         <link rel="stylesheet" href="/assets/fonts/VCROSDMono.css" />
         <link rel="stylesheet" href="/assets/fonts/chaney/stylesheet.css" />
