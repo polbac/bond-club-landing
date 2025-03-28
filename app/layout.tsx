@@ -22,13 +22,11 @@ export default function RootLayout({
   const pathname = headersList.get("x-invoke-path") || "";
   const isIndex = pathname === "/" || pathname === "";
 
-  console.log({ pathname });
-
   return (
     <html lang="en">
       <body>
         <HeaderContextProvider>
-          {!isIndex && <Header />}
+          <Header />
 
           {children}
         </HeaderContextProvider>
