@@ -10,7 +10,7 @@ import { Footer } from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "B.O.N.D. CLUB",
-  description: "donde el cine alternativo vive",
+  description: "estamos haciendo una multitud",
 };
 
 export default function RootLayout({
@@ -61,6 +61,7 @@ export default function RootLayout({
           href="/assets/fonts/Alternate_Gothic/stylesheet.css"
         />
         <link rel="stylesheet" href="/assets/fonts/matter/stylesheet.css" />
+        <link rel="icon" type="image/png" href="/assets/favicon.png" />
       </body>
     </html>
   );
