@@ -12,8 +12,8 @@ import classNames from "classnames";
 
 const MENU = [
   {
-    name: "Suscribite",
-    link: "/suscribite",
+    name: "Suscripción",
+    link: "/suscripcion",
   },
   {
     name: "Creadorxs",
