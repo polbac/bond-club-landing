@@ -12,8 +12,8 @@ import classNames from "classnames";
 
 const MENU = [
   {
-    name: "Multitud",
-    link: "/",
+    name: "Suscribite",
+    link: "/suscribite",
   },
   {
     name: "Creadorxs",
@@ -31,21 +31,16 @@ const MENU = [
         descripcion: "¿Cuánto sale subir un corto, un medio o un largo?",
         icon: "💰",
       },
-      {
-        link: "/subir-obra",
-        title: "Subir Obra",
-        descripcion: "Subí tu obra y empezá a ganarte unos mangos",
-        icon: "🆙",
-      },
     ],
   },
   {
-    name: "Espectadorxs",
-    link: "/espectadorxs",
+    name: "Multitud",
+    link: "/multitud",
   },
   {
-    name: "FAQs",
-    link: "/faqs",
+    name: "Subir obra",
+    link: process.env.NEXT_PUBLIC_PLAY_APP_URL,
+    external: true,
   },
   {
     name: "Play Bond",

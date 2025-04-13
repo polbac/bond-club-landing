@@ -17,7 +17,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Nimbus Sans L";
+  font-family: "Matter";
 }
 
 @layer utilities {
@@ -26,15 +26,15 @@ body {
   }
 }
 
-h1 {
-  font-size: 4rem;
-  font-family: "Nimbus Sans Cond L";
+h1,
+.title {
+  font-size: 6rem;
+  font-family: "Alternate";
   font-weight: normal;
   line-height: 90%;
-}
-
-.title {
-  font-family: "Nimbus Sans L";
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -5.1px;
 }
 
 .grain:after {
@@ -403,8 +403,13 @@ header.black .brand-black {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #e5e7eb;
 }
-
+.monetiza .heroblock .font-condensed {
+  color: #e5e7eb;
+  text-transform: uppercase;
+  font-size: 6rem;
+}
 .center-block {
   max-width: 600px;
   text-align: center;
@@ -454,7 +459,9 @@ header.black .brand-black {
 }
 
 .font-condensed {
-  font-family: "Nimbus Sans Cond L";
+  font-family: "Alternate";
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .font-serif {
@@ -753,4 +760,64 @@ footer .multitud {
 
 .equipo {
   background: #d6d4de;
+}
+
+section.multitud {
+  height: 100vh;
+}
+
+section.multitud h1 {
+  padding-top: 15vh;
+}
+
+section.multitud .multitud-block {
+  position: absolute;
+  max-width: 640px;
+  width: 90%;
+  top: 35vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+section.multitud h1 {
+  position: relative;
+  z-index: 3;
+}
+
+section.multitud .video-wrapper video {
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
+}
+
+section.multitud .video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  overflow: hidden;
+}
+
+.multitud-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 33.33%;
+}
+
+.multitud-area-1 {
+  left: 0;
+}
+
+.multitud-area-2 {
+  left: 33.33%;
+}
+
+.multitud-area-3 {
+  left: 66.66%;
 }

@@ -44,7 +44,7 @@ export default async function Monetiza() {
           </section>
           <section className="block">
             <Transition>
-              <h1 className="text-black text-center pt-20">
+              <h1 className="text-black text-center pt-20 font-condensed">
                 Convertite en Creadxr
               </h1>
             </Transition>

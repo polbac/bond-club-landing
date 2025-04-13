@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Alternate";
+  src: url("AlternateGotNo2D.woff2") format("woff2"),
+    url("AlternateGotNo2D.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: "Alternate";
+  src: url("AlternateGotNo3D.woff2") format("woff2"),
+    url("AlternateGotNo3D.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: "Alternate";
+  src: url("AlternateGotNo1D.woff2") format("woff2"),
+    url("AlternateGotNo1D.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  text-transform: uppercase;
+}

@@ -56,6 +56,11 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          rel="stylesheet"
+          href="/assets/fonts/Alternate_Gothic/stylesheet.css"
+        />
+        <link rel="stylesheet" href="/assets/fonts/matter/stylesheet.css" />
       </body>
     </html>
   );
