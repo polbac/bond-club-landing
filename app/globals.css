@@ -4,12 +4,12 @@
 
 :root {
   --background: #ededed;
-  --foreground: #000000;
+  --foreground: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
+    --background: #000;
     --foreground: #ededed;
   }
 }
@@ -92,25 +92,10 @@ h1,
 
 .section-generos {
   height: 100vh;
-  background: white;
-  position: relative;
-  background: rgb(226, 65, 183);
-  background: linear-gradient(
-    68deg,
-    rgba(226, 65, 183, 1) 0%,
-    rgba(0, 46, 255, 1) 100%
-  );
-}
-
-.section-generos .title {
+  width: 100vw;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  color: black;
-  font-size: 3rem;
-  width: 100%;
-  text-align: center;
-  transform: 0 -50%;
 }
 
 .section-generos .shape {
@@ -379,7 +364,7 @@ header.white a {
 }
 header.black button,
 header.black a {
-  color: black;
+  color: var(--foreground);
 }
 
 header .NavigationMenuContent,
@@ -521,7 +506,7 @@ header.black .brand-black {
 
 section.precios {
   background: #ded4d5;
-  color: black;
+  color: var(--foreground);
   padding-top: 9rem;
 }
 
@@ -623,7 +608,7 @@ section.subir-obra {
 footer {
   border-top: 1px solid black;
   background-color: #ffeb33;
-  color: black;
+  color: var(--foreground);
   line-height: 130%;
   padding-bottom: 200px !important;
   position: relative;
@@ -631,7 +616,7 @@ footer {
 }
 
 footer a {
-  color: black;
+  color: var(--foreground);
 }
 
 footer a:hover {
@@ -702,7 +687,7 @@ footer .multitud {
 }
 .button-white:hover {
   background: #ffeb33;
-  color: black;
+  color: var(--foreground);
 }
 .button-white:hover span {
   animation: eagger 1s;
@@ -820,4 +805,95 @@ section.multitud .video-wrapper {
 
 .multitud-area-3 {
   left: 66.66%;
+}
+
+.que-es {
+  position: relative;
+  scroll-snap-type: y mandatory;
+}
+
+.que-es .img-container {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+
+.que-es .img-container > div {
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+
+  overflow: hidden;
+  position: absolute;
+}
+
+.que-es .img-container img {
+  width: 300px;
+  height: 400px;
+}
+
+.que-es h1 {
+  color: white;
+  z-index: 999;
+  position: absolute;
+  top: 15vh;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .que-es .img-container > div {
+    width: 150px;
+    height: 200px;
+  }
+
+  .que-es .img-container img {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.esto-es-cine .main-body,
+.que-es .main-body {
+  color: white;
+  font-size: 2rem;
+  line-height: 90%;
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .block-content {
+  max-width: 960px;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.esto-es-cine {
+  background: var(--foreground);
+  color: var(--background);
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  width: 100%;
+}
+
+.esto-es-cine .cta-button {
+  display: inline-block;
+  padding: 1rem;
+  border: 1px solid white;
+  margin: auto;
 }

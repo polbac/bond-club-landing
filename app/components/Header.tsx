@@ -55,20 +55,22 @@ export const Header = () => {
   return (
     <header className={`h-14 fixed flex ${color}`}>
       <div className="brand-container">
-        <Image
-          className="brand-white"
-          src="/assets/brand-white.svg"
-          width="150"
-          alt="image"
-          height="20"
-        />
-        <Image
-          className="brand-black"
-          src="/assets/brand.svg"
-          width="150"
-          alt="image"
-          height="20"
-        />
+        <Link href={"/"}>
+          <Image
+            className="brand-white"
+            src="/assets/brand-white.svg"
+            width="150"
+            alt="image"
+            height="20"
+          />
+          <Image
+            className="brand-black"
+            src="/assets/brand.svg"
+            width="150"
+            alt="image"
+            height="20"
+          />
+        </Link>
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
         <NavigationMenu.List className="NavigationMenuList">
