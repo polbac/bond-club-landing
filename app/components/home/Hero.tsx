@@ -1,6 +1,8 @@
 "use client";
+/* tslint:disable */
+import Marquee from "react-fast-marquee";
+
 import { useEffect, useState } from "react";
-import { SplitText } from "../SplitText";
 
 const shapes = [
   {
@@ -117,26 +119,19 @@ const PHRASES = [
   "Donde intercambiamos visiones sobre el mundo",
 ];
 
-const COLORS = ["#ffcfd2", "#003f88", "#40916c", "#ffcfd2"];
+// const COLORS = ["#ffcfd2", "#003f88", "#40916c", "#ffcfd2"];
 
 export const Hero = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((c) => (c === PHRASES.length - 1 ? 0 : c + 1));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [setCurrent]);
-
   return (
     <section className="hero">
       <h1 className="big-title">
-        <marquee loop scrollamount="10">
-          BUSQUEDA <span>x</span> ORGANIZADA <span>x</span> NARRACIONES{" "}
-          <span>x</span>
-          DIVERSAS
-        </marquee>
+        <Marquee>
+          <>
+            BUSQUEDA <span>x</span> ORGANIZADA <span>x</span> NARRACIONES{" "}
+            <span>x</span>
+            DIVERSAS
+          </>
+        </Marquee>
       </h1>
 
       <section className="section-generos">
