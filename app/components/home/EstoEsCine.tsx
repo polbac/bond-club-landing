@@ -10,7 +10,9 @@ export const EstoEsCine = () => {
         </Transition>
       </h1>
       <p className="text-center main-body font-serif ">
-        <Transition>Todavia no lo tenemos claro.</Transition>
+        <Transition>
+          <>Todavia no lo tenemos claro.</>
+        </Transition>
       </p>
 
       <div className="text-center mt-9">
