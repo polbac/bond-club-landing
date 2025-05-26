@@ -2,6 +2,7 @@
 
 import { useContext, useState, useEffect } from "react";
 import { MenuColor } from "../components/MenuColor";
+import { SplitText } from "../components/SplitText";
 
 import { Transition } from "../components/Transition";
 import { HeaderContext } from "../context/HeaderContext";
@@ -22,7 +23,7 @@ export default function Multitud() {
         <section className="multitud pb-20">
           <h1 className="text-center relative" style={{ color: textColor }}>
             <Transition>
-              <>MANIFIESTO BOND</>
+              <>MANIFIESTO</>
             </Transition>
           </h1>
           <div className="video-wrapper">
@@ -35,16 +36,16 @@ export default function Multitud() {
           </div>
           {multitud === 0 && (
             <article className="multitud-block">
-              La multitud es un paisaje humano que no se domina, que busca desde
-              adentro develar el gestus necesario, la singularidad de cada
-              observador apasionado que recorre con ojos sensibles la
-              contingencia que los une. Adentro de este club heterogéneo, no
-              queremos hablar de lo audiovisual, sino ante lo audiovisual.
-              Saltamos de la idea al acto y volvemos a empezar, podemos pasar
-              por bocones, delirantes, provocadores y tercos. Nos sentimos
-              infoactivistas, simpatizantes del quehacer cultural, nos gusta
-              tanto el saber como el sentir y a veces todo junto. Producir en
-              estos tiempos nos provoca cosas, nos sacude los cables y pensamos,
+              La multitud es un paisaje humano que no se domina. Confiamos en la
+              pulsión inmanente de la singularidad de cada observador apasionado
+              que recorre con ojos sensibles la contingencia que los une.
+              Adentro de este club heterogéneo, no queremos hablar de lo
+              audiovisual, sino ante lo audiovisual. Saltamos de la idea al acto
+              y volvemos a empezar, podemos pasar por bocones, delirantes,
+              provocadores y tercos. Nos sentimos infoactivistas, tecno
+              paseantes, simpatizantes del quehacer cultural, nos gusta tanto el
+              saber, como el sentir y a veces todo junto. Producir en estos
+              tiempos nos provoca cosas, nos sacude los cables y pensamos,
               bastante seguido, que algo hay que hacer, por eso empezamos esto.
             </article>
           )}
@@ -64,15 +65,16 @@ export default function Multitud() {
           )}
           {multitud === 2 && (
             <article className="multitud-block" style={{ color: "white" }}>
-              ¿Cuál es la forma de todo esto? No estamos seguros, seguramente
-              algo descuadriculada, descongestionada, un nuevo cuerpo viviente
-              que en conjunto con otros cuerpos, pueda salir del adiestramiento
-              productivo y se permita explorar otros devenires en la realización
-              audiovisual. De lo masivo corremos y hacia la ternura vamos (te
-              esperamos), confiamos en la prueba como terreno fértil contagioso
-              y vital. En tiempos enamorados del ombligo y su posición inmóvil,
-              no queda mas que fortalecer el vinculo, preservar el margen
-              espiritual y establecer un recorrido afectivo de creación.
+              ¿Cual es la forma de todo esto? Dinámica, con el movimiento
+              necesario que da el intercambio. Seguramente algo descuadriculada,
+              descategorizada, un nuevo cuerpo viviente que en conjunto con
+              otros cuerpos, pueda salir del adiestramiento productivo y se
+              permita explorar otros devenires en la realización audiovisual. De
+              lo masivo corremos y hacia la ternura vamos (te esperamos),
+              confiamos en la prueba como terreno fértil contagioso y vital. En
+              tiempos enamorados del ombligo y su posición inmóvil, no queda más
+              que fortalecer el vínculo, preservar el margen espiritual y
+              establecer un recorrido afectivo de creación.
             </article>
           )}
           <div

@@ -1,4 +1,6 @@
-import { Transition } from "../Transition";
+"use client";
+import { useEffect, useState } from "react";
+import { SplitText } from "../SplitText";
 
 const shapes = [
   {
@@ -108,9 +110,35 @@ const shapes = [
   },
 ];
 
+const PHRASES = [
+  "Unxs agitadores de la produccion audiovisual",
+  "un Espacio de segundeo creativo",
+  "El hibridaje de obras y las singularidades que las llevan a cabo",
+  "Donde intercambiamos visiones sobre el mundo",
+];
+
+const COLORS = ["#ffcfd2", "#003f88", "#40916c", "#ffcfd2"];
+
 export const Hero = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((c) => (c === PHRASES.length - 1 ? 0 : c + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [setCurrent]);
+
   return (
     <section className="hero">
+      <h1 className="big-title">
+        <marquee loop scrollamount="10">
+          BUSQUEDA <span>x</span> ORGANIZADA <span>x</span> NARRACIONES{" "}
+          <span>x</span>
+          DIVERSAS
+        </marquee>
+      </h1>
+
       <section className="section-generos">
         {shapes.map((m, index) => (
           <div
@@ -135,17 +163,6 @@ export const Hero = () => {
           </div>
         ))}
       </section>
-
-      <div className="block-content">
-        <h1 className="text-center relative">
-          <Transition>
-            <>
-              No solo una plataforma de streaming, es un enclave dentro de la
-              produccion audiovisual.{" "}
-            </>
-          </Transition>
-        </h1>
-      </div>
     </section>
   );
 };

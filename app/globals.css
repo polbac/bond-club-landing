@@ -27,7 +27,8 @@ body {
 }
 
 h1,
-.title {
+.title,
+h2 {
   font-size: 6rem;
   font-family: "Alternate";
   font-weight: normal;
@@ -35,6 +36,9 @@ h1,
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: -5.1px;
+}
+h2 {
+  font-size: 5rem;
 }
 
 .grain:after {
@@ -88,6 +92,23 @@ h1,
 .section-hero {
   height: 100vh;
   z-index: 999999999;
+}
+.big-title {
+  font-size: 22rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: -1rem;
+}
+
+.big-title span {
+  font-size: 8rem;
+  font-family: "Matter";
+  position: relative;
+  margin-top: -4rem;
 }
 
 .section-generos {
@@ -440,7 +461,6 @@ header.black .brand-black {
 }
 
 .font-regular {
-  font-family: "Nimbus Sans L";
 }
 
 .font-condensed {
@@ -677,7 +697,6 @@ footer .multitud {
 .button-white {
   border: 1px solid #ffeb33;
   color: #ffeb33;
-  font-family: "Nimbus Sans Cond L";
   font-size: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -703,9 +722,14 @@ footer .multitud {
     transform: scale(1);
   }
 }
+.cta-button path {
+  fill: white;
+}
 
+.cta-button:hover path {
+  fill: black;
+}
 .cta-button {
-  font-family: "Nimbus Sans Cond L";
   background: black;
   color: white !important;
   border-radius: 40px;
@@ -764,6 +788,7 @@ section.multitud .multitud-block {
   transform: translateX(-50%);
   font-size: 1.5rem;
   line-height: 1.8rem;
+  text-align: justify;
 }
 
 section.multitud h1 {
@@ -863,7 +888,8 @@ section.multitud .video-wrapper {
   font-size: 2rem;
   line-height: 90%;
   max-width: 760px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -872,15 +898,19 @@ section.multitud .video-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero .block-content {
   max-width: 960px;
   width: 80%;
   position: absolute;
-  top: 50%;
+  top: 35vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
+}
+.hero .block-content h1 {
+  font-size: 5rem;
 }
 
 .esto-es-cine {
@@ -891,9 +921,319 @@ section.multitud .video-wrapper {
   width: 100%;
 }
 
+.gratarola .cta-button,
 .esto-es-cine .cta-button {
   display: inline-block;
   padding: 1rem;
   border: 1px solid white;
   margin: auto;
+}
+
+.gratarola {
+  min-height: 200vh;
+  overflow: hidden;
+  background: url(/assets/gratarola/gradient-grainy-gradient-background/8140419.jpg);
+  background-size: auto 100%;
+  display: block;
+}
+
+.gratarola .item {
+  position: absolute;
+}
+
+.gratarola .wall {
+  min-height: 100vh;
+  position: relative;
+}
+
+.chaboncito {
+  width: 15vw;
+  right: 0;
+  top: 10px;
+}
+
+.mano {
+  width: 15vw;
+  right: 20vw;
+  top: 10px;
+}
+
+.trampa {
+  width: 15vw;
+  left: 10vw;
+  top: 10vh;
+}
+
+.free {
+  width: 15vw;
+  left: 5vw;
+  bottom: 10vh;
+}
+
+.gati {
+  width: 25vw;
+  left: 15vw;
+  bottom: 20vh;
+}
+
+.llame {
+  width: 10vw;
+  right: 1vw;
+  bottom: 20vh;
+}
+
+.norbert {
+  width: 25vw;
+  right: 30vw;
+  bottom: 0vh;
+}
+
+.perri {
+  width: 35vw;
+  left: 40vw;
+  top: 10vh;
+}
+
+.trampa {
+  width: 25vw;
+  left: -2vh;
+  top: -2vh;
+}
+
+.gasoleros {
+  width: 29vw;
+  left: 10vh;
+  top: 15vh;
+}
+
+.linyera {
+  width: 11vw;
+  right: 0;
+  bottom: 0;
+}
+
+.pablo {
+  width: 11vw;
+  right: 55vw;
+  top: 40vh;
+}
+
+.roto {
+  width: 17vw;
+  right: 15vw;
+  top: 60vh;
+}
+
+.tetera {
+  width: 11vw;
+  right: 35vw;
+  top: 80vh;
+}
+
+.banner1 {
+  width: 30vw;
+  right: 15vw;
+  top: 20vh;
+}
+
+.banner2 {
+  width: 35vw;
+  left: 15vw;
+  bottom: 17vh;
+}
+
+.banner3 {
+  width: 29vw;
+  left: 0;
+  bottom: 67vh;
+}
+
+.banner4 {
+  width: 31vw;
+  right: 15vw;
+  top: 0;
+}
+.todopordospesos {
+  width: 19vw;
+  right: 52vw;
+  bottom: 0;
+}
+
+.mon {
+  width: 19vw;
+  left: 0;
+  bottom: 0;
+}
+
+.skorpion {
+  width: 11vw;
+  left: 0vw;
+  top: 50vh;
+}
+
+.dog {
+  width: 11vw;
+  left: 10vw;
+  bottom: 6vw;
+}
+
+.dany {
+  width: 16vw;
+  left: 30vw;
+  top: 1vw;
+}
+
+.pizza {
+  width: 16vw;
+  right: 20vw;
+  top: 6vw;
+}
+
+.comunismo {
+  width: 15vw;
+  right: 10vh;
+  top: 15vh;
+}
+.ceroochicientos {
+  width: 20vw;
+  right: 30vh;
+  bottom: 15vh;
+
+  animation: 0.5s blink infinite;
+}
+
+.alien,
+.weed,
+.mila,
+.emoji,
+.waldo,
+.pajaro,
+.chuck,
+.pancho,
+.monty,
+.david,
+.meme,
+.agne {
+  width: 15vw;
+}
+.waldo {
+  top: 90vh;
+  left: 16vw;
+}
+.pajaro {
+  top: 54vh;
+  left: 47vw;
+}
+.meme {
+  top: 74vh;
+  right: 22vw;
+}
+.weed {
+  width: 30vw;
+  top: 10vw;
+  left: 27vw;
+}
+.mila {
+  top: 30vh;
+  left: 40vw;
+  width: 30vw;
+}
+.pancho {
+  top: 15vh;
+  left: 30vw;
+}
+.emoji {
+  top: 40vh;
+  right: 0vw;
+}
+.alien {
+  right: 10vw;
+  top: 80vh;
+}
+
+.chuck {
+  top: 50vh;
+}
+.monty {
+  width: 20vw;
+  top: 59vh;
+  left: 30vw;
+}
+
+.david {
+  top: 29vh;
+  width: 20vw;
+  right: 10vw;
+}
+
+.agne {
+  top: 1vw;
+  right: 3vw;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(260deg);
+  }
+  0% {
+    transform: rotateY(0);
+  }
+}
+
+.dance {
+  width: 15vw;
+  right: 42vh;
+  bottom: 23vh;
+}
+
+.gratarola-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 14px;
+}
+.gratarola-content .content p {
+  font-size: 1.5rem;
+}
+.gratarola-content .content {
+  text-align: center;
+  min-height: 100vh;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+.gratarola-content .column {
+  max-width: 680px;
+  height: 300px;
+}
+
+.promo-lanzamiento {
+  background: rgb(194, 16, 16);
+  color: rgb(254, 233, 1);
+  font-family: "Alternate";
+  animation: 0.2s blink infinite;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  box-shadow: 0px 1px 10px #c31110;
 }

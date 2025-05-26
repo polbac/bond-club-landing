@@ -4,14 +4,16 @@ import Link from "next/link";
 export const EstoEsCine = () => {
   return (
     <section className="esto-es-cine">
-      <h1 className="text-center relative">
+      <h1 className="text-center relative mb-2">
         <Transition>
           <>¿ESTO ES CINE AMIGXS? </>
         </Transition>
       </h1>
-      <p className="text-center main-body">
+      <p className="text-center main-body font-serif ">
         <Transition>Todavia no lo tenemos claro.</Transition>
+      </p>
 
+      <div className="text-center mt-9">
         <Link href="/multitud" className={"cta-button"}>
           <span className="flex gap-1 block">
             <svg
@@ -105,10 +107,10 @@ export const EstoEsCine = () => {
                 />
               </g>
             </svg>
-            LEER MANIFIESTO
+            Leer Manifiesto
           </span>
         </Link>
-      </p>
+      </div>
     </section>
   );
 };

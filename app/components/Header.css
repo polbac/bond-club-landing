@@ -106,8 +106,8 @@ p {
   background-color: #ededed;
   border-radius: 0;
   border: 1px solid black;
-  font-family: "Nimbus Sans Cond L";
-  font-size: 2rem;
+
+  font-size: 1.2rem;
   overflow: hidden;
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
     hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
@@ -152,7 +152,7 @@ p {
   user-select: none;
   padding: 1rem;
 
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1;
 }
 .ListItemLink:focus {
@@ -324,8 +324,7 @@ p {
 
 .NavigationMenuLink,
 .NavigationMenuTrigger {
-  font-family: "Nimbus Sans Cond L";
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .NavigationMenuLink:hover,

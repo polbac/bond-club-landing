@@ -48,14 +48,14 @@ export default function RootLayout({
         /> */}
         <Footer />
 
-        <link rel="stylesheet" href="/assets/fonts/VCROSDMono.css" />
-        <link rel="stylesheet" href="/assets/fonts/chaney/stylesheet.css" />
+        {/* <link rel="stylesheet" href="/assets/fonts/VCROSDMono.css" />
+        <link rel="stylesheet" href="/assets/fonts/chaney/stylesheet.css" /> */}
         <link rel="stylesheet" href="/assets/fonts/medea/stylesheet.css" />
         <link rel="stylesheet" href="/assets/fonts/1/stylesheet.css" />
-        <link
+        {/* <link
           href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap"
           rel="stylesheet"
-        ></link>
+        ></link> */}
         <link
           rel="stylesheet"
           href="/assets/fonts/Alternate_Gothic/stylesheet.css"
