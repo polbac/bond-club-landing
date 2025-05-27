@@ -231,6 +231,8 @@ section {
 
 .section-que-es {
   height: 100vh;
+
+  background: whie;
 }
 
 .gradient-blur {
@@ -335,13 +337,11 @@ section {
 }
 
 .section-que-es {
-  background: rgb(176, 241, 142);
-  background: linear-gradient(
-    354deg,
-    rgba(176, 241, 142, 1) 0%,
-    rgba(255, 255, 255, 1) 64%
-  );
+  background: yellow;
+  position: relative;
+  z-index: 2;
 }
+
 .section-que-es .content {
   position: absolute;
   top: 50%;
@@ -915,12 +915,15 @@ section.multitud .video-wrapper {
 }
 
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   background-color: black;
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
 }
 
 .hero .block-content {

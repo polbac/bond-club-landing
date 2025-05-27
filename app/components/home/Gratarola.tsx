@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useScroll, useMotionValueEvent } from "motion/react";
+import { Transition } from "../../components/Transition";
 
 function transform(x: number, y: number, percent: number) {
   return {
@@ -201,160 +202,166 @@ export const Gratarola = () => {
         <div className="content flex">
           <div className="column">
             <p className="blink promo-lanzamiento">PROMO LANZAMIENTO</p>
-            <h2>3803 MINUTOS GRATAROLA</h2>
+            <Transition>
+              <h2>3803 MINUTOS GRATAROLA</h2>
+            </Transition>
 
-            <p className="font-serif block pb-5">
-              Invitamos a creadorxs a que puedan subir su obra por tiempo
-              limitado hasta que se suban 3083 minutos de obra.
-            </p>
+            <Transition>
+              <p className="font-serif block pb-5">
+                Invitamos a creadorxs a que puedan subir su obra por tiempo
+                limitado hasta que se suban 3083 minutos de obra.
+              </p>
+            </Transition>
 
             <div style={{ position: "relative" }}>
-              <Link href="#" className={"cta-button inline-block "}>
-                <span className="flex gap-1 block">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    id="Interface-Essential-Clock--Streamline-Pixel"
-                    height={24}
-                    width={24}
-                  >
-                    <desc>
-                      {
-                        "\n    Interface Essential Clock Streamline Icon: https://streamlinehq.com\n  "
-                      }
-                    </desc>
-                    <title>{"interface-essential-clock"}</title>
-                    <g>
-                      <path
-                        d="M22.8525 9.1425H24v5.715h-1.1475Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M21.7125 14.857499999999998h1.1400000000000001v2.2874999999999996h-1.1400000000000001Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M21.7125 6.855h1.1400000000000001v2.2874999999999996h-1.1400000000000001Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M20.572499999999998 17.145h1.1400000000000001v2.2800000000000002h-1.1400000000000001Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M20.572499999999998 4.574999999999999h1.1400000000000001v2.2800000000000002h-1.1400000000000001Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M19.424999999999997 19.424999999999997h1.1475v1.1475H19.424999999999997Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M19.424999999999997 3.4275h1.1475V4.574999999999999H19.424999999999997Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M17.137500000000003 20.572499999999998h2.2874999999999996v1.1400000000000001h-2.2874999999999996Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M17.137500000000003 2.2874999999999996h2.2874999999999996v1.1400000000000001h-2.2874999999999996Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="m10.2825 13.7175 1.1475 0 0 1.1400000000000001 1.1400000000000001 0 0 -1.1400000000000001 1.1400000000000001 0 0 -1.1475 4.574999999999999 0 0 -1.1400000000000001 -4.574999999999999 0 0 -1.1475 -1.1400000000000001 0 0 -6.855 -1.1400000000000001 0 0 6.855 -1.1475 0 0 1.1475 -1.1400000000000001 0 0 1.1400000000000001 1.1400000000000001 0 0 1.1475z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M14.857499999999998 21.7125h2.2800000000000002v1.1475h-2.2800000000000002Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M14.857499999999998 1.1400000000000001h2.2800000000000002v1.1475h-2.2800000000000002Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M9.1425 22.86h5.715V24h-5.715Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M9.1425 0h5.715v1.1400000000000001h-5.715Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M6.855 21.7125h2.2874999999999996v1.1475H6.855Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M6.855 1.1400000000000001h2.2874999999999996v1.1475H6.855Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M4.5675 20.572499999999998h2.2874999999999996v1.1400000000000001H4.5675Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M4.5675 2.2874999999999996h2.2874999999999996v1.1400000000000001H4.5675Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M3.4275 19.424999999999997h1.1400000000000001v1.1475H3.4275Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M3.4275 3.4275h1.1400000000000001V4.574999999999999H3.4275Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M2.2874999999999996 17.145h1.1400000000000001v2.2800000000000002H2.2874999999999996Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M2.2874999999999996 4.574999999999999h1.1400000000000001v2.2800000000000002H2.2874999999999996Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M1.1400000000000001 14.857499999999998h1.1475v2.2874999999999996H1.1400000000000001Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M1.1400000000000001 6.855h1.1475v2.2874999999999996H1.1400000000000001Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                      <path
-                        d="M0 9.1425h1.1400000000000001v5.715H0Z"
-                        fill="#000000"
-                        strokeWidth={0.75}
-                      />
-                    </g>
-                  </svg>
-                  Más info
-                </span>
-              </Link>
+              <Transition>
+                <Link href="#" className={"cta-button inline-block "}>
+                  <span className="flex gap-1 block">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      id="Interface-Essential-Clock--Streamline-Pixel"
+                      height={24}
+                      width={24}
+                    >
+                      <desc>
+                        {
+                          "\n    Interface Essential Clock Streamline Icon: https://streamlinehq.com\n  "
+                        }
+                      </desc>
+                      <title>{"interface-essential-clock"}</title>
+                      <g>
+                        <path
+                          d="M22.8525 9.1425H24v5.715h-1.1475Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M21.7125 14.857499999999998h1.1400000000000001v2.2874999999999996h-1.1400000000000001Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M21.7125 6.855h1.1400000000000001v2.2874999999999996h-1.1400000000000001Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M20.572499999999998 17.145h1.1400000000000001v2.2800000000000002h-1.1400000000000001Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M20.572499999999998 4.574999999999999h1.1400000000000001v2.2800000000000002h-1.1400000000000001Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M19.424999999999997 19.424999999999997h1.1475v1.1475H19.424999999999997Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M19.424999999999997 3.4275h1.1475V4.574999999999999H19.424999999999997Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M17.137500000000003 20.572499999999998h2.2874999999999996v1.1400000000000001h-2.2874999999999996Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M17.137500000000003 2.2874999999999996h2.2874999999999996v1.1400000000000001h-2.2874999999999996Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="m10.2825 13.7175 1.1475 0 0 1.1400000000000001 1.1400000000000001 0 0 -1.1400000000000001 1.1400000000000001 0 0 -1.1475 4.574999999999999 0 0 -1.1400000000000001 -4.574999999999999 0 0 -1.1475 -1.1400000000000001 0 0 -6.855 -1.1400000000000001 0 0 6.855 -1.1475 0 0 1.1475 -1.1400000000000001 0 0 1.1400000000000001 1.1400000000000001 0 0 1.1475z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M14.857499999999998 21.7125h2.2800000000000002v1.1475h-2.2800000000000002Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M14.857499999999998 1.1400000000000001h2.2800000000000002v1.1475h-2.2800000000000002Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M9.1425 22.86h5.715V24h-5.715Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M9.1425 0h5.715v1.1400000000000001h-5.715Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M6.855 21.7125h2.2874999999999996v1.1475H6.855Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M6.855 1.1400000000000001h2.2874999999999996v1.1475H6.855Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M4.5675 20.572499999999998h2.2874999999999996v1.1400000000000001H4.5675Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M4.5675 2.2874999999999996h2.2874999999999996v1.1400000000000001H4.5675Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M3.4275 19.424999999999997h1.1400000000000001v1.1475H3.4275Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M3.4275 3.4275h1.1400000000000001V4.574999999999999H3.4275Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M2.2874999999999996 17.145h1.1400000000000001v2.2800000000000002H2.2874999999999996Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M2.2874999999999996 4.574999999999999h1.1400000000000001v2.2800000000000002H2.2874999999999996Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M1.1400000000000001 14.857499999999998h1.1475v2.2874999999999996H1.1400000000000001Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M1.1400000000000001 6.855h1.1475v2.2874999999999996H1.1400000000000001Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                        <path
+                          d="M0 9.1425h1.1400000000000001v5.715H0Z"
+                          fill="#000000"
+                          strokeWidth={0.75}
+                        />
+                      </g>
+                    </svg>
+                    Más info
+                  </span>
+                </Link>
+              </Transition>
             </div>
           </div>
         </div>

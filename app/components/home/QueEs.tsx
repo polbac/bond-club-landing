@@ -42,15 +42,12 @@ const DATA = [
 
 export const QueEs = () => {
   return (
-    <div className="que-es">
+    <div className="section-que-es">
       <h1 className="text-center relative">
         <Transition>
-          <>¿QUÉ ES?</>
+          <>¿QUÉ SOMOS?</>
         </Transition>
       </h1>
-      {DATA.map((item) => (
-        <Image key={item.image} image={item.image} body={item.body} />
-      ))}
     </div>
   );
 };
