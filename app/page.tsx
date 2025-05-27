@@ -9,11 +9,11 @@ import { Gratarola } from "./components/home/Gratarola";
 export default function Home() {
   const { setColor } = useContext(HeaderContext);
   useEffect(() => {
-    setColor("black");
+    setColor("white");
   }, []);
   return (
     <main>
-      <MenuColor color="black">
+      <MenuColor color="white">
         <Hero />
       </MenuColor>
       <MenuColor color="white">

@@ -2,7 +2,7 @@
 /* tslint:disable */
 import Marquee from "react-fast-marquee";
 
-import { useEffect, useState } from "react";
+import { Transition } from "../../components/Transition";
 
 const shapes = [
   {
@@ -125,13 +125,15 @@ export const Hero = () => {
   return (
     <section className="hero">
       <h1 className="big-title">
-        <Marquee>
-          <>
-            BUSQUEDA <span>x</span> ORGANIZADA <span>x</span> NARRACIONES{" "}
-            <span>x</span>
-            DIVERSAS
-          </>
-        </Marquee>
+        <Transition>
+          <Marquee>
+            <>
+              BUSQUEDA <span>x</span> ORGANIZADA <span>x</span> NARRACIONES{" "}
+              <span>x</span>
+              DIVERSAS
+            </>
+          </Marquee>
+        </Transition>
       </h1>
 
       <section className="section-generos">
@@ -158,6 +160,16 @@ export const Hero = () => {
           </div>
         ))}
       </section>
+
+      <p className="bottom-block font-serif text-white">
+        <Transition>
+          <span>
+            Seguí scrolleando
+            <br />
+            <i className="icono-arrow1-down"></i>
+          </span>
+        </Transition>
+      </p>
     </section>
   );
 };
