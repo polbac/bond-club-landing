@@ -130,7 +130,7 @@ export const Hero = () => {
             <>
               BUSQUEDA <span>x</span> ORGANIZADA <span>x</span> NARRACIONES{" "}
               <span>x</span>
-              DIVERSAS
+              DIVERSAS<span>x</span>
             </>
           </Marquee>
         </Transition>
