@@ -6,6 +6,9 @@ import { QueEs } from "./components/home/QueEs";
 import { EstoEsCine } from "./components/home/EstoEsCine";
 import { MenuColor } from "./components/MenuColor";
 import { Gratarola } from "./components/home/Gratarola";
+import { Monetizacion } from "./components/home/Monetizacion";
+import { Catalogo } from "./components/home/Catalogo";
+
 export default function Home() {
   const { setColor } = useContext(HeaderContext);
   useEffect(() => {
@@ -16,8 +19,14 @@ export default function Home() {
       <MenuColor color="white">
         <Hero />
       </MenuColor>
-      <MenuColor color="white">
+      <MenuColor color="black">
         <QueEs />
+      </MenuColor>
+      <MenuColor color="white">
+        <Monetizacion />
+      </MenuColor>
+      <MenuColor color="white">
+        <Catalogo />
       </MenuColor>
       <MenuColor color="white">
         <Gratarola />

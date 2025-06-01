@@ -5,6 +5,8 @@
 :root {
   --background: #ededed;
   --foreground: #000;
+  --beige: #f1efe0;
+  --black: #222;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,13 +31,12 @@ body {
 h1,
 .title,
 h2 {
-  font-size: 6rem;
+  font-size: 5.2em;
   font-family: "Alternate";
   font-weight: normal;
+  letter-spacing: -0.04em;
   line-height: 90%;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: -5.1px;
+  font-weight: bold;
 }
 h2 {
   font-size: 5rem;
@@ -135,9 +136,14 @@ h2 {
 .section-generos {
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.section-generos h1 {
+  margin-top: 10vh;
 }
 
 .section-generos .shape {
@@ -232,7 +238,11 @@ section {
 .section-que-es {
   height: 100vh;
 
-  background: whie;
+  background: var(--beige);
+}
+
+.section-que-es h1 {
+  padding-top: 15vh;
 }
 
 .gradient-blur {
@@ -337,7 +347,6 @@ section {
 }
 
 .section-que-es {
-  background: yellow;
   position: relative;
   z-index: 2;
 }
@@ -491,7 +500,7 @@ header.black .brand-black {
 }
 
 .font-serif {
-  font-family: "Cardinal Fruit";
+  font-family: "PP Editorial New";
 }
 
 [class*="icono"] {
@@ -882,6 +891,9 @@ section.multitud .video-wrapper {
   width: 300px;
   height: 400px;
 }
+h1 {
+  font-weight: 400;
+}
 
 .que-es h1 {
   color: white;
@@ -1261,4 +1273,168 @@ section.multitud .video-wrapper {
   padding-right: 10px;
   padding-bottom: 5px;
   box-shadow: 0px 1px 10px #c31110;
+}
+
+.monetizacion {
+  background: var(--black);
+  height: 230vh;
+  position: relative;
+  color: var(--beige);
+  padding-top: 10vh;
+  text-align: left;
+}
+.monetizacion h1 {
+  margin-top: 20px;
+}
+.monetizacion p {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.monetizacion .block-content {
+  margin: auto;
+  margin-top: 20px;
+  max-width: 840px;
+  text-align: center;
+  position: sticky;
+  top: 10vh;
+}
+
+.home-button {
+  border: 0px solid var(--beige);
+  background-color: #424242;
+  cursor: pointer;
+
+  padding: 1.5em 3em;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.home-button::before,
+.home-button::after,
+.home-button span::before,
+.home-buttonspan ::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+}
+
+.home-button::before {
+  border: 0;
+  border-top: 1px solid var(--beige);
+  border-left: 1px solid var(--beige);
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.home-button:hover::before {
+  top: -5px;
+  left: -5px;
+}
+
+.home-button::after {
+  border: 0;
+  border-right: 1px solid var(--beige);
+  border-bottom: 1px solid var(--beige);
+  transition: all 0.3s ease;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.home-button span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-top: 1px solid var(--beige);
+  border-right: 1px solid var(--beige);
+  transition: all 0.3s ease;
+  right: 0;
+  top: 0;
+}
+
+.home-button:hover span::after {
+  right: -5px;
+  top: -5px;
+}
+
+.home-button span::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid var(--beige);
+  border-left: 1px solid var(--beige);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.home-button:hover::after {
+  right: -5px;
+  bottom: -5px;
+}
+
+.home-button:hover span::before {
+  bottom: -5px;
+  left: -5px;
+}
+
+.monetizacion .block-content video {
+  max-width: 340px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.mangos-floating {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+}
+
+.monetizacion video {
+  transition: 4s all;
+  width: 340px;
+  margin: auto;
+}
+
+.monetizacion video.video-100 {
+  width: 100vw;
+}
+
+.atributo {
+  width: 960px;
+  height: 100px;
+  color: white;
+  /* background: red; */
+  font-size: 4rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 20vh;
+  /* border: 5px solid black; */
+  position: sticky;
+  z-index: 2000;
+  top: 50vh;
+  font-family: "Alternate";
+  text-transform: uppercase;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.section-catalogo {
+  position: relative;
+  z-index: 3000;
+  height: 100vh;
+  background: var(--beige);
+  padding-top: 20vh;
 }
