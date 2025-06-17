@@ -13,7 +13,7 @@ export function FloatingMango({ index, mousePosition }: MangoProps) {
     const margin = 0;
     return {
       x: margin + Math.random() * (window.innerWidth - margin * 2),
-      y: margin + Math.random() * (window.innerHeight * 0.5 - margin * 2),
+      y: margin + Math.random() * (window.innerHeight - margin * 2),
     };
   };
 

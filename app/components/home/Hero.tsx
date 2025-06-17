@@ -1,175 +1,237 @@
 "use client";
 /* tslint:disable */
-import Marquee from "react-fast-marquee";
+import { times } from "lodash";
+import { useInViewport } from "../../hooks/useInViewport";
+import { Jarron } from "../../shapes/jarron";
+import { Estrella } from "../../shapes/estrella";
+import { Manojo } from "../../shapes/manojo";
+import { Manos4 } from "../../shapes/4manos";
+import { useRef } from "react";
 
-import { Transition } from "../../components/Transition";
-
-const shapes = [
-  {
-    svg: {
-      file: "mano.svg",
-      width: 268,
-      height: 299,
-    },
-    video: {
-      file: "forma1.mp4",
-      width: 300,
-      height: 300,
-    },
-    top: -5,
-    left: 0,
-    transition: "float1",
-  },
-  {
-    svg: {
-      file: "bota.svg",
-      width: 268,
-      height: 299,
-    },
-    video: {
-      file: "forma2.mp4",
-      width: 300,
-      height: 300,
-    },
-    top: 60,
-    left: 80,
-    transition: "float2",
-  },
-  {
-    svg: {
-      file: "jarro.svg",
-      width: 268,
-      height: 299,
-    },
-    video: {
-      file: "forma3.mp4",
-      width: 300,
-      height: 300,
-    },
-    top: 10,
-    left: 80,
-    transition: "float1",
-  },
-  {
-    svg: {
-      file: "huevo.svg",
-      width: 209,
-      height: 209,
-    },
-    video: {
-      file: "forma4.mp4",
-      width: 300,
-      height: 300,
-    },
-    top: 60,
-    left: 30,
-    transition: "float2",
-  },
-  {
-    svg: {
-      file: "cara.svg",
-      width: 300,
-      height: 300,
-    },
-    video: {
-      file: "forma5.mp4",
-      width: 300,
-      height: 300,
-    },
-    top: 55,
-    left: 2,
-    transition: "float1",
-  },
-  {
-    svg: {
-      file: "pija.svg",
-      width: 400,
-      height: 200,
-    },
-    video: {
-      file: "forma5.mp4",
-      width: 400,
-      height: 400,
-    },
-    top: -15,
-    left: 30,
-    transition: "float2",
-  },
-  {
-    svg: {
-      file: "cuerpo.svg",
-      width: 210,
-      height: 400,
-    },
-    video: {
-      file: "forma6.mp4",
-      width: 400,
-      height: 400,
-    },
-    top: 60,
-    left: 0,
-    transition: "float1 shape-6",
-  },
-];
-
-const PHRASES = [
-  "Unxs agitadores de la produccion audiovisual",
-  "un Espacio de segundeo creativo",
-  "El hibridaje de obras y las singularidades que las llevan a cabo",
-  "Donde intercambiamos visiones sobre el mundo",
-];
-
-// const COLORS = ["#ffcfd2", "#003f88", "#40916c", "#ffcfd2"];
-
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+const TOTAL_ELEMENTS = 100;
 export const Hero = () => {
+  const { elementRef, isInViewport } = useInViewport();
+
+  const container = useRef();
+
+  useGSAP(
+    () => {
+      function move1() {
+        gsap.to(".shape-1", {
+          x: -20 + Math.random() * 10,
+          y: -20 + Math.random() * 10,
+          rotate: -20 + Math.random() * 40,
+          duration: 1 + Math.random() * 6,
+          onComplete: move1,
+          ease: "back.in",
+        });
+      }
+      function move2() {
+        gsap.to(".shape-2", {
+          scale: 0.5 + Math.random() * 1,
+          rotate: Math.random() * 360,
+          duration: 2,
+          onComplete: move2,
+          ease: "expo",
+        });
+      }
+      function move3() {
+        gsap.to(".shape-3", {
+          x: -20 + Math.random() * 10,
+          y: -20 + Math.random() * 10,
+          rotate: -20 + Math.random() * 40,
+          duration: 1 + Math.random() * 6,
+          onComplete: move3,
+          ease: "back.in",
+        });
+      }
+      function move4() {
+        gsap.to(".shape-4", {
+          x: -20 + Math.random() * 10,
+          y: -20 + Math.random() * 10,
+          rotate: -20 + Math.random() * 40,
+          duration: 1 + Math.random() * 6,
+          onComplete: move4,
+          ease: "back.in",
+        });
+      }
+      gsap.set(".shape", {
+        scale: 0,
+      });
+      gsap.to(".shape-1", {
+        scale: 1,
+        y: 0,
+        delay: 1.5,
+        opacity: 1,
+        onComplete: move1,
+      });
+      gsap.to(".shape-2", {
+        scale: 1,
+        y: 0,
+        delay: 1.6,
+        opacity: 1,
+        onComplete: move2,
+      });
+      gsap.to(".shape-3", {
+        scale: 1,
+        y: 0,
+        delay: 1.7,
+        opacity: 1,
+        onComplete: move3,
+      });
+      gsap.to(".shape-4", {
+        scale: 1,
+        x: -200 + Math.random() * 400,
+        y: -200 + Math.random() * 400,
+        rotate: -20 + Math.random() * 40,
+        delay: 1.8,
+        opacity: 1,
+        onComplete: move4,
+      });
+      gsap.set(".busqueda", { x: -4000 });
+      gsap.to(".busqueda", {
+        opacity: 0.6,
+        x: "20vw",
+        duration: 2,
+        ease: "expo.out",
+      });
+
+      gsap.set(".organizada", { x: 4000 });
+      gsap.to(".organizada", {
+        opacity: 0.6,
+        x: 0,
+        duration: 2,
+        ease: "expo.out",
+      });
+
+      gsap.set(".narraciones", { x: -4000 });
+      gsap.to(".narraciones", {
+        opacity: 0.6,
+        x: "20vw",
+        duration: 2,
+        ease: "expo.out",
+      });
+
+      gsap.set(".diversas", { x: 4000 });
+      gsap.to(".diversas", {
+        opacity: 0.6,
+        x: 0,
+        duration: 2,
+        ease: "expo.out",
+      });
+
+      gsap.to(
+        ".diversas:not(.diversas-0),.busqueda:not(.busqueda-0),.organizada:not(.organizada-0),.narraciones:not(.narraciones-0)",
+        {
+          opacity: 0,
+          duration: 0.5,
+          delay: 2,
+        }
+      );
+      gsap.to(".diversas-0,.busqueda-0,.organizada-0,.narraciones-0", {
+        opacity: 1,
+        duration: 0.5,
+        delay: 2,
+      });
+
+      gsap.to(".shape-1 ", {
+        scrollTrigger: {
+          trigger: ".hero",
+          scrub: 1,
+          start: "top bottom",
+          end: "bottom top",
+        },
+        top: "-100px",
+        right: "-20vw",
+      });
+
+      gsap.to(".shape-2 ", {
+        scrollTrigger: {
+          trigger: ".hero",
+          scrub: 1,
+          start: "top bottom",
+          end: "bottom top",
+        },
+        top: "-500px",
+        scale: 3,
+        left: "-20vw",
+      });
+
+      gsap.to(".shape-3 ", {
+        scrollTrigger: {
+          trigger: ".hero",
+          scrub: 1,
+          start: "top bottom",
+          end: "bottom top",
+        },
+        top: "-10px",
+        right: "-5vw",
+      });
+      gsap.to(".shape-4 ", {
+        scrollTrigger: {
+          trigger: ".hero",
+          scrub: 1,
+          start: "top bottom",
+          end: "bottom top",
+        },
+        top: "500px",
+        scale: 3,
+        left: "-20vw",
+      });
+
+      return () => {
+        gsap.killTweensOf(".shape");
+      };
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="hero">
-      <h1 className="big-title">
-        <Transition>
-          <Marquee>
-            <>
-              BUSQUEDA <span>x</span> ORGANIZADA <span>x</span> NARRACIONES{" "}
-              <span>x</span>
-              DIVERSAS<span>x</span>
-            </>
-          </Marquee>
-        </Transition>
-      </h1>
-
-      <section className="section-generos">
-        {shapes.map((m, index) => (
-          <div
-            key={`genero-${index}`}
-            className={`shape ${m.transition}`}
-            style={{
-              width: m.svg.width,
-              maskImage: `url(/assets/shapes/${m.svg.file})`,
-              maskSize: `${m.svg.width}px ${m.svg.height}px`,
-              top: `${m.top}%`,
-              left: `${m.left}%`,
-            }}
-          >
-            <video
-              src={`/assets/videos/generos/${m.video.file}`}
-              muted
-              autoPlay
-              loop
-              height={m.video.height}
-              width={m.video.width}
-            />
-          </div>
+    <section className="hero" ref={elementRef as never}>
+      <div ref={container as never}>
+        {times(TOTAL_ELEMENTS).map((index) => (
+          <>
+            <h1
+              className={`busqueda busqueda-${index}`}
+              style={{ left: `${index * 80 + 10}vh` }}
+            >
+              Búsqueda
+            </h1>
+            <h1
+              className={`organizada organizada-${index}`}
+              style={{ right: `${index * 80 + 35}vh` }}
+            >
+              Organizada
+            </h1>
+            <h1
+              className={`narraciones narraciones-${index}`}
+              style={{ left: `${index * 84}vh` }}
+            >
+              Narraciones
+            </h1>
+            <h1
+              className={`diversas diversas-${index}`}
+              style={{ right: `${index * 60 + 40}vh` }}
+            >
+              Diversas
+            </h1>
+          </>
         ))}
-      </section>
-
-      <p className="bottom-block font-serif text-white">
-        <Transition>
-          <span>
-            Seguí scrolleando
-            <br />
-            <i className="icono-arrow1-down"></i>
-          </span>
-        </Transition>
-      </p>
+        <div className="shape shape-1">
+          <Jarron />
+        </div>
+        <div className="shape shape-2">
+          <Estrella />
+        </div>
+        <div className="shape shape-3">
+          <Manos4 />
+        </div>
+        <div className="shape shape-4">
+          <Manojo />
+        </div>
+      </div>
     </section>
   );
 };

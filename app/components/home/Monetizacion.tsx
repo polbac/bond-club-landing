@@ -1,11 +1,6 @@
 "use client";
 import FloatingMangos from "../FloatingMangos";
-import {
-  motion,
-  MotionValue,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import { useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -34,7 +29,7 @@ export const Monetizacion = () => {
         <h1 className="font-serif">
           Conocé nuestro revolucionario sistema de Monetización.
         </h1>
-        <Link href={"/monetizacion"} className="home-button">
+        <Link href={"/monetiza"} className="home-button">
           <span>CONOCER MÁS</span>
         </Link>
         <video

@@ -8,6 +8,13 @@ import { MenuColor } from "./components/MenuColor";
 import { Gratarola } from "./components/home/Gratarola";
 import { Monetizacion } from "./components/home/Monetizacion";
 import { Catalogo } from "./components/home/Catalogo";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import gsap from "gsap";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const { setColor } = useContext(HeaderContext);

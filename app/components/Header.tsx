@@ -379,7 +379,7 @@ export const Header = () => {
                     <Link
                       href={menu.link || ""}
                       target={menu.external ? "_blank" : "_self"}
-                      className={menu.external ? "cta-button" : ""}
+                      className={menu.external ? "cta-button font-serif" : ""}
                     >
                       <span className="flex gap-1 block">
                         {menu.icon}
