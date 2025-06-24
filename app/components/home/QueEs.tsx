@@ -19,8 +19,8 @@ export const QueEs = () => {
 
           scrollTrigger: {
             trigger: `.cont`,
-            start: `-50%'`,
-            end: `50%`,
+            start: `top ${100 - item * 15}%`,
+            end: `bottom`,
             scrub: 1,
           },
         });
@@ -28,16 +28,16 @@ export const QueEs = () => {
 
       gsap.to(`.surfer`, {
         opacity: 1,
-        duration: 2,
-        right: "150%",
-        top: "150%",
+        duration: 1,
+        right: "900px",
+        top: "50%",
         scrollTrigger: {
-          trigger: `.marqueeee`,
-          start: `top`,
+          trigger: `.cont`,
+          start: `top 90%`,
           end: `bottom`,
           scrub: 1,
         },
-        rotate: 170,
+        rotate: 20,
       });
     },
     { scope: container }
@@ -46,24 +46,22 @@ export const QueEs = () => {
   return (
     <div className="section-que-es" ref={container as never}>
       <div className="cont">
-        <Marquee className="marqueeee">
-          <p className="text-center font-serif marquee flex">
-            <>¿Qué es todo esto ?</>
-            <Ojo />
-          </p>
-          <p className="text-center font-serif marquee flex">
-            <>¿Qué es todo esto ?</>
-            <Ojo />
-          </p>
-        </Marquee>
+        <div className="marqueeee">
+          <Marquee>
+            <p className="text-center font-serif marquee flex">
+              <>¿Qué es todo esto ?</>
+              <Ojo />
+            </p>
+            <p className="text-center font-serif marquee flex">
+              <>¿Qué es todo esto ?</>
+              <Ojo />
+            </p>
+          </Marquee>
+        </div>
         <div className="surfer">
           <Surfer />
         </div>
         <div className="que-es-text">
-          <p className="tt-1 tt">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
           <p className="tt-2 tt">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.

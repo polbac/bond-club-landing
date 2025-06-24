@@ -46,7 +46,7 @@ export const CuantosMangos = () => (
       }}
     >
       <Transition>
-        <h1 className=" text-center">
+        <h1 className=" text-center" style={{ color: "#47966a" }}>
           ¿Cuántos mangos voy a cobrar por mes? 🤔
         </h1>
       </Transition>

@@ -30,11 +30,12 @@ export default function Home() {
         <QueEs />
       </MenuColor>
       <MenuColor color="white">
-        <Monetizacion />
-      </MenuColor>
-      <MenuColor color="white">
         <Catalogo />
       </MenuColor>
+      <MenuColor color="white">
+        <Monetizacion />
+      </MenuColor>
+
       <MenuColor color="white">
         <Gratarola />
       </MenuColor>

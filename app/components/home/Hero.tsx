@@ -155,7 +155,7 @@ export const Hero = () => {
           end: "bottom top",
         },
         top: "-500px",
-        scale: 3,
+
         left: "-20vw",
       });
 
@@ -177,7 +177,7 @@ export const Hero = () => {
           end: "bottom top",
         },
         top: "500px",
-        scale: 3,
+
         left: "-20vw",
       });
 
@@ -195,25 +195,25 @@ export const Hero = () => {
           <>
             <h1
               className={`busqueda busqueda-${index}`}
-              style={{ left: `${index * 80 + 10}vh` }}
+              style={{ left: `${index * 90}vh` }}
             >
               Búsqueda
             </h1>
             <h1
               className={`organizada organizada-${index}`}
-              style={{ right: `${index * 80 + 35}vh` }}
+              style={{ right: `${index * 100 + 20}vh` }}
             >
               Organizada
             </h1>
             <h1
               className={`narraciones narraciones-${index}`}
-              style={{ left: `${index * 84}vh` }}
+              style={{ left: `${index * 109}vh` }}
             >
               Narraciones
             </h1>
             <h1
               className={`diversas diversas-${index}`}
-              style={{ right: `${index * 60 + 40}vh` }}
+              style={{ right: `${index * 80 + 40}vh` }}
             >
               Diversas
             </h1>

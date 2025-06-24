@@ -6,6 +6,7 @@ import { Timeline } from "../components/monetiza/Timeline";
 import { Convertite } from "../components/monetiza/Convertite";
 import { CalculoMango } from "../components/monetiza/CalculoMango";
 import { CuantosMangos } from "../components/monetiza/CuantosMangos";
+import { Estrella2 } from "../shapes/estrella2";
 import { title, description } from "../utils/metadata";
 
 import { Transition } from "../components/Transition";
@@ -23,7 +24,7 @@ export default async function Monetiza() {
         <MenuColor color="black">
           <section className="heroblock">
             <BackgroundVideo src="/assets/videos/monetizar/mangos.mp4" />
-            <h1 className="center-block font-condensed">
+            <h1 className="center-block ">
               <Transition>
                 <span>
                   ¿Querés ganarte
@@ -44,7 +45,7 @@ export default async function Monetiza() {
           </section>
           <section className="block">
             <Transition>
-              <h1 className="text-black text-center pt-20 font-condensed">
+              <h1 className="text-black text-center pt-20 ">
                 Convertite en Creadxr
               </h1>
             </Transition>
@@ -61,6 +62,9 @@ export default async function Monetiza() {
           </section>
 
           <section className="block">
+            <div className="shape-1">
+              <Estrella2 />
+            </div>
             <Transition>
               <h1 className="text-black text-center pt-20 mb-5">
                 ¿Cómo me vuelvo un creadxr??
