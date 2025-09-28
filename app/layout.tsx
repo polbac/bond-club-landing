@@ -34,12 +34,9 @@ export default function RootLayout({
 
         <Footer />
 
-        <div className="camera-top-left"></div>
-        <div className="camera-top-right"></div>
-        <div className="camera-bottom-left"></div>
-        <div className="camera-bottom-right"></div>
 
         <link rel="stylesheet" href="/assets/fonts/stylesheet.css" />
+        <link rel="stylesheet" href="/assets/fonts/pp-editorial/stylesheet.css" />
 
         <link rel="icon" type="image/png" href="/assets/favicon.png" />
       </body>

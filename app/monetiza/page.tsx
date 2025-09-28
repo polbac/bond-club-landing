@@ -62,7 +62,7 @@ export default async function Monetiza() {
           </section>
 
           <section className="block">
-            <div className="shape-1">
+            <div className="shape-1" style={{ width: "200px", textAlign: "center", margin: "auto" }}>
               <Estrella2 />
             </div>
             <Transition>

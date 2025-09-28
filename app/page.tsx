@@ -32,7 +32,7 @@ export default function Home() {
       <MenuColor color="white">
         <Catalogo />
       </MenuColor>
-      <MenuColor color="white">
+      <MenuColor color="black">
         <Monetizacion />
       </MenuColor>
 

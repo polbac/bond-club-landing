@@ -13,7 +13,7 @@ export function FloatingMango({ index, mousePosition }: MangoProps) {
     const margin = 0;
     return {
       x: margin + Math.random() * (window.innerWidth - margin * 2),
-      y: margin + Math.random() * (window.innerHeight - margin * 2),
+      y: margin + Math.random() * ((window.innerHeight * 2) - margin * 2),
     };
   };
 
@@ -28,7 +28,7 @@ export function FloatingMango({ index, mousePosition }: MangoProps) {
   const calculateRepulsion = () => {
     const distance = Math.sqrt(
       Math.pow(mousePosition.x - currentPosition.x, 2) +
-        Math.pow(mousePosition.y - currentPosition.y, 2)
+      Math.pow(mousePosition.y - currentPosition.y, 2)
     );
 
     const repulsionRadius = 120; // Radio de repulsión
@@ -55,7 +55,7 @@ export function FloatingMango({ index, mousePosition }: MangoProps) {
       );
       const newY = Math.max(
         margin,
-        Math.min(window.innerHeight - margin, baseTarget.y + repulsionY)
+        Math.min((window.innerHeight * 2) - margin, baseTarget.y + repulsionY)
       );
 
       return { x: newX, y: newY };
@@ -96,7 +96,7 @@ export function FloatingMango({ index, mousePosition }: MangoProps) {
 }
 
 export default function Component() {
-  const [mangoCount] = useState(() => Math.floor(Math.random() * 6) + 10);
+  const [mangoCount] = useState(() => Math.floor(Math.random() * 16) + 10);
   const [mounted, setMounted] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 

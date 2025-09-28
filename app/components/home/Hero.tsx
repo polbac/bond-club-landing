@@ -201,7 +201,7 @@ export const Hero = () => {
             </h1>
             <h1
               className={`organizada organizada-${index}`}
-              style={{ right: `${index * 100 + 20}vh` }}
+              style={{ right: `${index * 100 + 30}vh` }}
             >
               Organizada
             </h1>
@@ -213,7 +213,7 @@ export const Hero = () => {
             </h1>
             <h1
               className={`diversas diversas-${index}`}
-              style={{ right: `${index * 80 + 40}vh` }}
+              style={{ right: `${index * 80 + 60}vh` }}
             >
               Diversas
             </h1>

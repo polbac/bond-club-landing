@@ -39,12 +39,24 @@ export const QueEs = () => {
         },
         rotate: 20,
       });
+      gsap.to(`.video-community`, {
+        opacity: 1,
+        duration: 1,
+        top: "50%",
+        scrollTrigger: {
+          trigger: `.cont`,
+          start: `top 10%`,
+          scrub: 1,
+        },
+        rotate: 0,
+        scale: 2
+      });
     },
     { scope: container }
   );
 
   return (
-    <div className="section-que-es" ref={container as never}>
+    <div className="section-que-es" ref={container as never} style={{ overflow: "hidden" }}>
       <div className="cont">
         <div className="marqueeee">
           <Marquee>
@@ -91,6 +103,14 @@ export const QueEs = () => {
             industry.
           </p>
         </div>
+        <div className="flex justify-center my-12 video-community">
+          <video
+            src="/assets/home/video-monetizacion.mp4?2"
+            muted
+            loop
+            autoPlay
+            width={300}
+          /></div>
       </div>
     </div>
   );

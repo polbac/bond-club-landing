@@ -39,7 +39,7 @@ const MENU = [
   },
   {
     name: "Subir obra",
-    link: process.env.NEXT_PUBLIC_PLAY_APP_URL,
+    link: process.env.NEXT_PUBLIC_PLAY_APP_URL + "/upload",
     external: true,
     icon: (
       <svg
@@ -381,7 +381,7 @@ export const Header = () => {
                       target={menu.external ? "_blank" : "_self"}
                       className={menu.external ? "cta-button font-serif" : ""}
                     >
-                      <span className="flex gap-1 block">
+                      <span className="flex gap-1 block items-center">
                         {menu.icon}
                         {menu.name}
                       </span>
