@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 export const EstoEsCine = () => {
   return (
     <section className="esto-es-cine">
-      <BackgroundVideo src="/assets/home/video-monetizacion.mp4?2" />
+      <BackgroundVideo src="/assets/videos/estoescine.mp4?2" />
       <Marquee speed={100} >
         <h1 className="font-pixel esto-es-cine-titulo">
 

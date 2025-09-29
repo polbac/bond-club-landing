@@ -3,8 +3,8 @@ import { HeaderContext } from "./context/HeaderContext";
 import { useEffect, useContext } from "react";
 import { Hero } from "./components/home/Hero";
 import { QueEs } from "./components/home/QueEs";
+import { SumateMultitud } from "./components/home/SumateMultitud";
 import { EstoEsCine } from "./components/home/EstoEsCine";
-import { MenuColor } from "./components/MenuColor";
 import { Gratarola } from "./components/home/Gratarola";
 import { Monetizacion } from "./components/home/Monetizacion";
 import { Catalogo } from "./components/home/Catalogo";
@@ -28,9 +28,12 @@ export default function Home() {
 
       <QueEs />
 
+
       <EstoEsCine />
 
       <Catalogo />
+
+      <SumateMultitud />
 
       <Monetizacion />
 
