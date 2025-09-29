@@ -14,6 +14,12 @@
   --orange: #fe9e1a;
 }
 
+html {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 
 body {
@@ -574,6 +580,12 @@ header.black .brand-black {
   font-style: italic;
 }
 
+.font-pixel {
+  font-family: 'PP Mondwest';
+
+
+}
+
 [class*="icono"] {
   position: relative;
   display: inline-block;
@@ -786,7 +798,7 @@ footer .multitud {
 }
 
 .button-white:hover {
-  background: #ffeb33;
+  background: var(--lightViolet);
   color: var(--foreground);
 }
 
@@ -809,13 +821,14 @@ footer .multitud {
   fill: white;
 }
 
+.cta-button path,
 .cta-button:hover path {
-  fill: black;
+  fill: var(--lightViolet);
 }
 
 .cta-button {
-  background: black;
-  color: white !important;
+  background: var(--black);
+  color: var(--lightViolet);
   border-radius: 40px;
   margin-right: 5px;
 
@@ -825,7 +838,7 @@ footer .multitud {
 }
 
 .cta-button span {
-  color: white;
+  color: var(--lightViolet);
 }
 
 .cta-button:hover span {
@@ -833,13 +846,13 @@ footer .multitud {
 }
 
 .cta-button:hover span {
-  color: black;
+  color: var(--lightViolet);
   text-decoration: none !important;
 }
 
 .cta-button:hover {
-  background: #ffeb33;
-  border: 1px solid black;
+  color: var(--lightViolet);
+  border: 1px solid var(--black);
 }
 
 .padding-top {
@@ -1060,12 +1073,35 @@ h1 {
   font-weight: 200;
 }
 
+.manifiesto-boton {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+}
+
 .esto-es-cine {
   background: var(--foreground);
   color: var(--background);
   padding-top: 20vh;
   padding-bottom: 20vh;
   width: 100%;
+  height: 85vh;
+}
+
+.esto-es-cine-titulo {
+  color: var(--lightViolet);
+}
+
+.esto-es-cine-titulo-2 {
+  color: var(--orange);
+}
+
+.esto-es-cine-titulo-2,
+.esto-es-cine-titulo {
+  font-size: 20vh;
+  padding: 2vh
 }
 
 .monetizacion .cta-button,
@@ -1077,12 +1113,10 @@ h1 {
   margin: auto;
 }
 
-.gratarola .wall {
-  background-color: var(--orange);
-}
+.gratarola .wall {}
 
 .gratarola {
-  min-height: 200vh;
+  height: 150vh;
   overflow: hidden;
   background-color: var(--green);
   background-size: auto 100%;
@@ -1383,7 +1417,7 @@ h1 {
 
 .gratarola-content .content {
   text-align: center;
-  min-height: 100vh;
+  min-height: 50vh;
   flex-wrap: nowrap;
   justify-content: center;
   gap: 50px;
@@ -1395,11 +1429,26 @@ h1 {
   height: 300px;
 }
 
+.promo-lanzamiento svg {
+  width: 100px;
+  height: 100px;
+  fill: #EBC548;
+}
+
+.promo-lanzamiento span {
+  margin: 20px
+}
+
+.gratarola-body {
+  color: var(--lightViolet)
+}
+
 .promo-lanzamiento {
 
-  color: rgb(254, 233, 1);
-  font-family: "Alternate";
-  animation: 0.2s blink infinite;
+  color: #EBC548;
+  font-size: 10rem;
+  font-family: "PP Mondwest";
+
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
@@ -1412,11 +1461,12 @@ h1 {
 
 .monetizacion {
   background: var(--background);
-  height: 260vh;
+  height: 250vh;
   position: relative;
   color: var(--beige);
   text-align: left;
   color: var(--green);
+
 }
 
 .monetizacion .shape-1 {
@@ -1577,7 +1627,7 @@ h1 {
 .section-catalogo {
   position: relative;
   z-index: 3000;
-  height: 300vh;
+  height: 200vh;
   background: var(--black);
   padding-top: 20vh;
 }
@@ -1713,4 +1763,19 @@ h1 {
   height: 20vh;
   position: absolute;
   top: -10vh;
+}
+
+
+.neonText {
+  color: var(--orange);
+  text-shadow:
+    0 0 7px #fff,
+
+    0 0 42px var(--orange);
+
+
+  border: 2px solid var(--orange);
+  border-radius: 10px;
+  padding: 20px 30px 4px 30px;
+  display: inline-block;
 }

@@ -22,9 +22,9 @@ export default function Multitud() {
       <MenuColor color="white">
         <section className="multitud pb-20">
           <h1 className="text-center relative" style={{ color: textColor }}>
-            <Transition>
-              <div className="">MANIFIESTO</div>
-            </Transition>
+
+            <div className="font-pixel">MANIFIESTO</div>
+
           </h1>
           <div className="video-wrapper">
             <video

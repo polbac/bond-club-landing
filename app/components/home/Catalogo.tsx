@@ -54,7 +54,8 @@ export const Catalogo = () => {
           scrub: 1,
         },
         x: "-2500px",
-        y: 200
+        y: 200,
+        rotate: -1
       });
       gsap.to(`.frases-flotantes-2`, {
         opacity: 1,
@@ -80,7 +81,8 @@ export const Catalogo = () => {
           end: `bottom`,
           scrub: 1,
         },
-        x: "-2100px"
+        x: "-2100px",
+        y: 400
       });
 
 
@@ -95,7 +97,7 @@ export const Catalogo = () => {
           scrub: 1,
         },
         x: "-2100px",
-        y: -100
+        y: 400
       });
 
       gsap.to(`.block-1`, {

@@ -1,10 +1,9 @@
 "use client";
-import Link from "next/link";
+
 import { useRef, useState } from "react";
 import { useScroll, useMotionValueEvent } from "motion/react";
-import { Transition } from "../../components/Transition";
 import { useInViewport } from "../../hooks/useInViewport";
-
+import Marquee from "react-fast-marquee";
 function transform(x: number, y: number, percent: number) {
   return {
     transform: `translate(${Number((percent as never) * x)}px, ${Number(
@@ -150,7 +149,7 @@ export const Gratarola = () => {
             <img
               src="/assets/gratarola/alien.png"
               className="item alien"
-              style={{ ...transform(160, -72, posY as never) }}
+              style={{ ...transform(560, 172, posY as never) }}
             />
             <img
               src="/assets/gratarola/weed.png"
@@ -224,22 +223,57 @@ export const Gratarola = () => {
           </div>
 
           <div className="gratarola-content">
+
+
             <div className="content flex">
               <div className="column">
-                <p className="blink promo-lanzamiento font-serif" style={{ transform: `translateY(${-posY * 200}px)` }} >PROMO LANZAMIENTO</p>
-
-                <h2 className="gratarola-title font-serif" style={{ transform: `translateY(${-posY * 200}px)` }}>Gratarola</h2>
 
 
-                <Transition>
-                  <p className="font-serif block pb-5" style={{ transform: `translateY(${-posY * 100}px)` }}>
-                    Invitamos a creadorxs a que puedan subir su obra por
-                    tiempo limitado hasta que se suban 3083 minutos de obra.
-                  </p>
-                </Transition>
+                <h2 className="neonText font-serif" style={{ transform: `translateY(${-posY * 150}px) scale(${2 - posY})` }}>Gratarola</h2>
+
+
+
+                <p className="block pb-5 gratarola-body" style={{ transform: `translateY(${-posY * 120}px) scale(${2 - posY})`, }}>
+                  Invitamos a creadorxs a que puedan subir su obra por
+                  tiempo limitado hasta que se suban 3083 minutos de obra.
+                </p>
+
 
 
               </div>
+
+
+            </div>
+
+
+            <div className=" promo-lanzamiento " style={{ marginTop: `-${posY * 400}px` }} >
+              <Marquee>
+                <span>
+                  PROMO LANZAMIENTO
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M5 3h14v2H5V3zm0 16H3V5h2v14zm14 0v2H5v-2h14zm0 0h2V5h-2v14zM10 8H8v2h2V8zm4 0h2v2h-2V8zm-5 6v-2H7v2h2zm6 0v2H9v-2h6zm0 0h2v-2h-2v2z" fill="currentColor" /> </svg>
+                </span>
+                <span>
+                  PROMO LANZAMIENTO
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M5 3h14v2H5V3zm0 16H3V5h2v14zm14 0v2H5v-2h14zm0 0h2V5h-2v14zM10 8H8v2h2V8zm4 0h2v2h-2V8zm-5 6v-2H7v2h2zm6 0v2H9v-2h6zm0 0h2v-2h-2v2z" fill="currentColor" /> </svg>
+                </span>
+                <span>
+                  PROMO LANZAMIENTO
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M5 3h14v2H5V3zm0 16H3V5h2v14zm14 0v2H5v-2h14zm0 0h2V5h-2v14zM10 8H8v2h2V8zm4 0h2v2h-2V8zm-5 6v-2H7v2h2zm6 0v2H9v-2h6zm0 0h2v-2h-2v2z" fill="currentColor" /> </svg>
+                </span>
+                <span>
+                  PROMO LANZAMIENTO
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M5 3h14v2H5V3zm0 16H3V5h2v14zm14 0v2H5v-2h14zm0 0h2V5h-2v14zM10 8H8v2h2V8zm4 0h2v2h-2V8zm-5 6v-2H7v2h2zm6 0v2H9v-2h6zm0 0h2v-2h-2v2z" fill="currentColor" /> </svg>
+                </span>
+              </Marquee>
+
             </div>
           </div>
         </>

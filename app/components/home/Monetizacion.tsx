@@ -43,7 +43,7 @@ export const Monetizacion = () => {
 
         <p>[NO SOMOS COMO LAS OTRAS PLATAFORMAS]</p>
         <h1 >
-          conocé<br />nuestro<br />revolucionario<br />sistema de<br />monetización
+          conocé<br />nuestro<br />novedozo<br />sistema de<br />monetización
         </h1>
 
         <div className="text-right mt-9">

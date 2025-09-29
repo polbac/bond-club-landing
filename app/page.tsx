@@ -23,25 +23,23 @@ export default function Home() {
   }, []);
   return (
     <main>
-      <MenuColor color="white">
-        <Hero />
-      </MenuColor>
-      <MenuColor color="black">
-        <QueEs />
-      </MenuColor>
-      <MenuColor color="white">
-        <Catalogo />
-      </MenuColor>
-      <MenuColor color="black">
-        <Monetizacion />
-      </MenuColor>
 
-      <MenuColor color="white">
-        <Gratarola />
-      </MenuColor>
-      <MenuColor color="white">
-        <EstoEsCine />
-      </MenuColor>
+      <Hero />
+
+      <QueEs />
+
+      <EstoEsCine />
+
+      <Catalogo />
+
+      <Monetizacion />
+
+
+
+      <Gratarola />
+
+
+
     </main>
   );
 }

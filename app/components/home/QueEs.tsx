@@ -39,18 +39,7 @@ export const QueEs = () => {
         },
         rotate: 20,
       });
-      gsap.to(`.video-community`, {
-        opacity: 1,
-        duration: 1,
-        top: "50%",
-        scrollTrigger: {
-          trigger: `.cont`,
-          start: `top 10%`,
-          scrub: 1,
-        },
-        rotate: 0,
-        scale: 2
-      });
+
     },
     { scope: container }
   );
@@ -75,42 +64,26 @@ export const QueEs = () => {
         </div>
         <div className="que-es-text">
           <p className="tt-2 tt">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Creemos en expandir la nocion de obra,
+          </p>
+          <p className="tt-2 tt">
+            de espectador y de autor.
           </p>
           <p className="tt-3 tt">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Buscamos lo multiple
+          </p>
+          <p className="tt-3 tt">
+            y diverso dentro de los formatos de creacion,
           </p>
           <p className="tt-4 tt">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            poder establacer una resistencia novedosa
           </p>
-          <p className="tt-5 tt">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+          <p className="tt-4 tt">
+            entre la imagen y la idea.
           </p>
-          <p className="tt-6 tt">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-          <p className="tt-7 tt">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-          <p className="tt-8 tt">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
+
         </div>
-        <div className="flex justify-center my-12 video-community">
-          <video
-            src="/assets/home/video-monetizacion.mp4?2"
-            muted
-            loop
-            autoPlay
-            width={300}
-          /></div>
+
       </div>
     </div>
   );

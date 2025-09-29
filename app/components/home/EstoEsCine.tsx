@@ -1,21 +1,25 @@
-import { Transition } from "../Transition";
 import Link from "next/link";
-
+import { BackgroundVideo } from "../BackgroundVideo"
+import Marquee from "react-fast-marquee";
 export const EstoEsCine = () => {
   return (
     <section className="esto-es-cine">
-      <h1 className="text-center relative mb-2">
-        <Transition>
-          <>¿ESTO ES CINE AMIGXS? </>
-        </Transition>
-      </h1>
-      <p className="text-center main-body font-serif ">
-        <Transition>
-          <>Todavia no lo tenemos claro.</>
-        </Transition>
-      </p>
+      <BackgroundVideo src="/assets/home/video-monetizacion.mp4?2" />
+      <Marquee speed={100} >
+        <h1 className="font-pixel esto-es-cine-titulo">
 
-      <div className="text-center mt-9">
+          <>¿ESTO ES CINE AMIGXS? </>
+
+        </h1>
+      </Marquee>
+      <Marquee speed={100} direction="right">
+        <h1 className="font-serif esto-es-cine-titulo-2">
+
+          <>TODAVIA NO LO TENEMOS CLARO </>
+
+        </h1>
+      </Marquee>
+      <div className="text-center mt-9 manifiesto-boton font-serif">
         <Link href="/multitud" className={"cta-button"}>
           <span className="flex gap-1 block">
             <svg
@@ -113,6 +117,6 @@ export const EstoEsCine = () => {
           </span>
         </Link>
       </div>
-    </section>
+    </section >
   );
 };
