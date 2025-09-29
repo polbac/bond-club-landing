@@ -197,26 +197,26 @@ export const Hero = () => {
               className={`busqueda busqueda-${index}`}
               style={{ left: `${index * 90}vh` }}
             >
-              Búsqueda
+              <span style={{ color: "#EBC549" }}>B</span>úsqueda
             </h1>
             <h1
               className={`organizada organizada-${index}`}
               style={{ right: `${index * 100 + 30}vh` }}
             >
-              Organizada
+              <span style={{ color: "#47966A" }}>O</span>rganizada
             </h1>
             <h1
               className={`narraciones narraciones-${index}`}
               style={{ left: `${index * 109}vh` }}
             >
-              Narraciones
+              <span style={{ color: "#3B74FE" }}>N</span>arraciones
             </h1>
             <h1
               className={`diversas diversas-${index}`}
               style={{ right: `${index * 80 + 60}vh` }}
             >
-              Diversas
-            </h1>
+              <span style={{ color: "#FE583B" }}>D</span>iversas
+            </h1 >
           </>
         ))}
         <div className="shape shape-1">
@@ -232,6 +232,6 @@ export const Hero = () => {
           <Manojo />
         </div>
       </div>
-    </section>
+    </section >
   );
 };
