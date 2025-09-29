@@ -14,9 +14,11 @@ const MENU = [
   {
     name: "Suscripción",
     link: "/suscripcion",
+    color: "#D8C8E4"
   },
   {
     name: "Creadorxs",
+    color: "#B0CDE3",
     image: "/assets/menu/filmaker.png",
     items: [
       {
@@ -36,9 +38,11 @@ const MENU = [
   {
     name: "Multitud",
     link: "/multitud",
+    color: "#FE583B",
   },
   {
     name: "Subir obra",
+    color: "#39835B",
     link: process.env.NEXT_PUBLIC_PLAY_APP_URL + "/upload",
     external: true,
     icon: (
@@ -183,6 +187,7 @@ const MENU = [
     name: "Play Bond",
     link: process.env.NEXT_PUBLIC_PLAY_APP_URL,
     external: true,
+    color: "#F49B28",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -325,10 +330,10 @@ const MENU = [
 ];
 
 export const Header = () => {
-  const { color } = useContext(HeaderContext);
+
 
   return (
-    <header className={`h-14 fixed flex ${color}`}>
+    <header className={`h-14 fixed flex white`}>
       <div className="brand-container">
         <Link href={"/"}>
           <Image
@@ -352,9 +357,10 @@ export const Header = () => {
           {MENU.map((menu) => (
             <>
               {menu.items ? (
-                <NavigationMenu.Item>
+                <NavigationMenu.Item >
                   <NavigationMenu.Trigger className="NavigationMenuTrigger">
-                    {menu.name}
+                    <span style={{ color: menu.color }}>
+                      {menu.name}</span>
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="NavigationMenuContent ">
                     <ul className="List one">
@@ -381,7 +387,7 @@ export const Header = () => {
                       target={menu.external ? "_blank" : "_self"}
                       className={menu.external ? "cta-button font-serif" : ""}
                     >
-                      <span className="flex gap-1 block items-center">
+                      <span className="flex gap-1 block items-center" style={{ color: menu.color }}>
                         {menu.icon}
                         {menu.name}
                       </span>

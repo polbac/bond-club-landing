@@ -454,6 +454,7 @@ header {
   backdrop-filter: blur(16px);
   background-color: rgba(217, 217, 217, 0.1);
   border-radius: 40px;
+  background-color: var(--black);
 }
 
 header nav a {
