@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { BackgroundVideo } from "../BackgroundVideo"
 import CurvedLoop from "../../../components/ui/shadcn-io/curved-loop";
-
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { useRef, useState } from "react";
 
 export const SumateMultitud = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+  const [posY, setPosY] = useState(0);
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    setPosY(current);
+  });
+  console.log(-posY * 300)
   return (
-    <section className="sumate-a-la-multitud">
+    <section className="sumate-a-la-multitud" ref={ref}>
       <BackgroundVideo src="/assets/videos/sumate_corto.mp4?2" />
       <div className="contain">
 
@@ -16,7 +27,7 @@ export const SumateMultitud = () => {
           <CurvedLoop
             marqueeText="sumate a la multitud / "
             speed={1}
-            curveAmount={-200}
+            curveAmount={-(posY / 15) * 4000}
             direction="left"
             interactive={false}
             className="text-foreground"

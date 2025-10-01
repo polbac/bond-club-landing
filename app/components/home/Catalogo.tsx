@@ -97,7 +97,7 @@ export const Catalogo = () => {
           scrub: 1,
         },
         x: "-2100px",
-        y: 400
+        y: -100
       });
 
       gsap.to(`.block-1`, {

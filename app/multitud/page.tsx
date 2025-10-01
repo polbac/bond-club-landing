@@ -23,7 +23,7 @@ export default function Multitud() {
         <section className="multitud pb-20">
           <h1 className="text-center relative" style={{ color: textColor }}>
 
-            <div className="font-pixel">MANIFIESTO</div>
+            <div className="font-wired">MANIFIESTO</div>
 
           </h1>
           <div className="video-wrapper">
@@ -35,7 +35,7 @@ export default function Multitud() {
             />
           </div>
           {multitud === 0 && (
-            <article className="multitud-block font-serif">
+            <article className="multitud-block font">
               La multitud es un paisaje humano que no se domina. Confiamos en la
               pulsión inmanente de la singularidad de cada observador apasionado
               que recorre con ojos sensibles la contingencia que los une.
@@ -51,7 +51,7 @@ export default function Multitud() {
           )}
 
           {multitud === 1 && (
-            <article className="multitud-block font-serif" style={{ color: "white" }}>
+            <article className="multitud-block font-" style={{ color: "white" }}>
               Te estamos buscando para inventar una manera de exorcizar el
               estancamiento, armar un kit de superviviencia creativa para
               expandirnos. B.O.N.D quiere problematizar la nocion de obra,
@@ -64,7 +64,7 @@ export default function Multitud() {
             </article>
           )}
           {multitud === 2 && (
-            <article className="multitud-block font-serif" style={{ color: "white" }}>
+            <article className="multitud-block font-" style={{ color: "white" }}>
               ¿Cual es la forma de todo esto? Dinámica, con el movimiento
               necesario que da el intercambio. Seguramente algo descuadriculada,
               descategorizada, un nuevo cuerpo viviente que en conjunto con

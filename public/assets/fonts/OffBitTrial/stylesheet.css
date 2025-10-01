@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'OffBit Trial';
+    src: url('OffBitTrial-Dot.woff2') format('woff2'),
+        url('OffBitTrial-Dot.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OffBit Trial';
+    src: url('OffBitTrial-101.woff2') format('woff2'),
+        url('OffBitTrial-101.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OffBit Trial';
+    src: url('OffBitTrial-DotBold.woff2') format('woff2'),
+        url('OffBitTrial-DotBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OffBit Trial';
+    src: url('OffBitTrial-Bold.woff2') format('woff2'),
+        url('OffBitTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OffBit Trial';
+    src: url('OffBitTrial-Regular.woff2') format('woff2'),
+        url('OffBitTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OffBit Trial';
+    src: url('OffBitTrial-101Bold.woff2') format('woff2'),
+        url('OffBitTrial-101Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

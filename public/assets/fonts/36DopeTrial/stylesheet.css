@@ -1,0 +1,45 @@
+@font-face {
+    font-family: '36Dope Trial Super';
+    src: url('36DopeTrial-SuperBold.woff2') format('woff2'),
+        url('36DopeTrial-SuperBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '36Dope Trial';
+    src: url('36DopeTrial-Light.woff2') format('woff2'),
+        url('36DopeTrial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '36Dope Trial';
+    src: url('36DopeTrial-Bold.woff2') format('woff2'),
+        url('36DopeTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '36Dope Trial Super';
+    src: url('36DopeTrial-SuperLight.woff2') format('woff2'),
+        url('36DopeTrial-SuperLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '36Dope Trial';
+    src: url('36DopeTrial-Regular.woff2') format('woff2'),
+        url('36DopeTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

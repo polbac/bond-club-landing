@@ -200,8 +200,8 @@ export const Hero = () => {
               <span style={{ color: "#EBC549" }}>B</span>úsqueda
             </h1>
             <h1
-              className={`organizada organizada-${index}`}
-              style={{ right: `${index * 100 + 30}vh` }}
+              className={`organizada organizada-${index} `}
+              style={{ right: `${index * 120 + 20}vh` }}
             >
               <span style={{ color: "#47966A" }}>O</span>rganizada
             </h1>

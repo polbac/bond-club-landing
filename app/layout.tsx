@@ -37,6 +37,8 @@ export default function RootLayout({
 
         <link rel="stylesheet" href="/assets/fonts/stylesheet.css" />
         <link rel="stylesheet" href="/assets/fonts/pp-editorial/stylesheet.css" />
+        <link rel="stylesheet" href="/assets/fonts/OffBitTrial/stylesheet.css" />
+        <link rel="stylesheet" href="/assets/fonts/36DopeTrial/stylesheet.css" />
 
         <link rel="icon" type="image/png" href="/assets/favicon.png" />
       </body>

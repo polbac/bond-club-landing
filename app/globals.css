@@ -14,6 +14,36 @@
   --orange: #fe9e1a;
 }
 
+html::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(https://grainy-gradients.vercel.app/noise.svg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999;
+  pointer-events: none;
+  filter: contrast(146%) brightness(1000%);
+  mix-blend-mode: multiply;
+  background-color: black;
+  opacity: 0.5;
+  animation: 300s scrollBackground infinite;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0% 0%;
+    /* Starting position */
+  }
+
+  100% {
+    background-position: 0% -1000%;
+    /* Ending position (e.g., scrolls horizontally) */
+  }
+}
+
 html {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -111,17 +141,7 @@ h2 {
   z-index: 999999999;
 }
 
-.loading {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
 
-  background: black;
-  color: white;
-  z-index: 99999;
-}
 
 .loading-skel {
   position: fixed;
@@ -581,9 +601,11 @@ header.black .brand-black {
 }
 
 .font-pixel {
-  font-family: 'PP Mondwest';
+  font-family: 'OffBit Trial';
+}
 
-
+.font-wired {
+  font-family: '36Dope Trial';
 }
 
 [class*="icono"] {
@@ -728,7 +750,7 @@ section.subir-obra {
 
 footer {
   border-top: 1px solid black;
-  background-color: #ffeb33;
+  background-color: var(--lightViolet);
   color: var(--foreground);
   line-height: 130%;
   padding-bottom: 200px !important;
@@ -1005,7 +1027,8 @@ h1 {
   transform: translate(-50%, -50%);
   font-size: 2vh;
   color: var(--orange);
-  background: var(--black)
+  background: var(--black);
+  z-index: 9999999999;
 }
 
 .sumate-a-la-multitud .contain {}
@@ -1108,9 +1131,9 @@ h1 {
 
 .hero .organizada {
   top: 38%;
-  font-family: 'PP Editorial New';
-  font-style: italic;
-  font-weight: 200;
+  font-family: '36Dope Trial';
+
+  font-weight: 400;
 }
 
 .hero .narraciones {
